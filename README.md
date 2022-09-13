@@ -1,2 +1,2 @@
-# CSCI-4700-5700
+# immic
 Text-based game engine in Python.
