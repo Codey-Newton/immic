@@ -1,0 +1,36 @@
+Start Scene #START
+
+This is the opening scene of the adventure.
+
+op 1: Make 1st Choice -> Scene #1
+op 2: Make 2nd Choice -> Scene #2
+op 3: Make 3rd Choice -> Scene #3
+op 4: Make 4th Choice -> Scene #4
+
+Scene #1
+
+desc: You chose the 1st choice. This is scene 1.
+
+op 1: End the game -> End Scene
+
+Scene #2
+
+desc: You chose the 2nd choice. This is scene 2.
+
+op 1: End the game -> End Scene
+
+Scene #3
+
+desc: You chose the 3rd choice. This is scene 3.
+
+op 1: End the game -> End Scene
+
+Scene #4
+
+desc: You chose the 4th choice. This is scene 4.
+
+op 1: End the game -> End Scene
+
+End Scene #END
+
+desc: This is the end of the adventure.
