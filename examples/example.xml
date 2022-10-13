@@ -1,0 +1,33 @@
+<adventure>
+    <scene>
+        <dialog>
+            Hello there..
+            I bet you werent exepecting to hear from me so soon...
+            ...you seem a little confused do you know who I am?
+        </dialog>
+        <options>Yeah of course!</options>
+        <options>I'm sorry I dont</options>
+    </scene>
+    <scene>
+        <dialog>
+            Go figure.. a fall like that couldn't get through your thick skull
+            Not to mention how could you forget me your best friend Jeff
+        </dialog>
+        <options>What did I hit my head on?</options>
+        <options>Really?</options>
+    </scene>
+    <scene>
+        <dialog>
+            another dialog
+        </dialog>
+        <options>op 5</options>
+        <options>op 6</options>
+    </scene>
+    <scene>
+        <dialog>
+            another dialog again.
+        </dialog>
+        <options>op 7</options>
+        <options>op 8</options>
+    </scene>
+</adventure>
