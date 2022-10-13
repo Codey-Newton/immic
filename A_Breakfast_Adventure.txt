@@ -1,0 +1,216 @@
+Scene START
+
+desc1: You awaken with a grumble of your stomach. You realize that you are quite hungry and decide that you want to get some breakfast this morning. But, wait.
+
+Where have you actually woken up at?
+
+op1: In your bed. -> InBed
+op2: In a tree. -> InTree //
+
+###
+
+Scene InBed
+
+desc1: Well, obviously, you're in your bed of course. Where else would you be? You groggily climb out from under your covers and sit up.
+Your bedroom door is located to your left beyond the foot of your bed. There is a window to your right overlooking the neighborhood you reside in from your
+2nd story vantage point. Feeling another growl from your stomach, you decide it's time to get up and get some food.
+
+How do you choose to go downstairs?
+
+op1: Use bedroom door. -> BedDoor
+op2: Use bedroom window. -> BedWindow //
+---
+
+###
+
+Scene BedDoor
+
+if perception > 4 display desc 1
+else display desc 2
+
+desc1: You notice that the staircase has been recently polished and waxed. "Who would polish and wax my hardwood stairs?" you wonder to yourself.
+Anyway, you decide to take it slowly down them as to not injure yourself. Once you get to the bottom, you deem it time to decide what you actually want to eat.
+
+op1: Go to kitchen. -> MakeFood
+op2: Get your keys. -> GetFood //
+op3: Grab phone. -> OrderFood //
+---
+
+desc2: Without even taking a mere second to even look at your surroundings, you decide to start your jog down the stairs.
+Unfortunately, you've failed to notice that someone had recently polished and waxed the stairs outside of your bedroom...
+After making it successfully onto the first step, your foot slides rather quickly out from under your body and you begin your unceremonious tumble
+down the staircase. Your world becomes a blur of rotation household furniture as you approach your destination of the living room floor. Ouch
+
+-1 Endurance
+
+op1: Go to kitchen. -> MakeFood
+op2: Get your keys. -> GetFood
+op3: Grab phone. -> OrderFood //
+---
+
+###
+
+Scene GetFood
+
+desc1: Deciding you aren't really in the mood to eat anything you may have lying around the house, you opt to hit the road in favor of picking something up somewhere
+else. You grab your keys and head off.
+
+So you head out the front door. Open the garage door. Then you open the car doors. And you get in those car doors. Put your key in the ignition. And then you turn
+it sideways. Then you fasten your seat belt. As you pull out the driveway.
+
+Now that your on the road, what are you in the mood for?
+
+op1: Dine-in cafe. -> DineIn //
+op2: Fast food drive-thru. -> DriveThru //
+---
+
+### 
+
+Scene MakeFood
+
+desc1: Making your way into the kitchen, you look around in the fridge and cabinets looking for what you have lying around that you could make.
+In the fridge and freezer you find: some milk and bacon.
+In the cabinets you find: some pancake mix, toaster pastries, bread, and cereal.
+
+What will you make?
+
+op1: Cereal -> MakeCereal
+op2: Toast and bacon -> ToastAndBacon
+op3: Pancakes -> MakePancakes
+op4: The toaster pastries -> ToasterPastries
+---
+
+###
+
+Scene ToasterPastries
+
+desc1: You grab the pasties out of the cabinet and plop them into the toaster. Starting the toaster, you wait a couple minutes before they eventually pop
+out, slightly startling you, ready to be enjoyed. You take a bite and they taste exactly how you'd expect a corporate chemical creation to taste... nothing else
+of note really happens. That was quite boring, but then again, should it not have been? It was a pre-packaged item designed for a quick, albeit usually unsatisfying
+morning treat. Maybe you could try something else next time, or maybe you really enjoyed this easy meal. Regardless, your job is done.
+
+Congragulations! You had breakfast. It may have been unceremonius and frankly pretty bland, but hey, good job.
+
+THE END
+---
+
+###
+
+Scene MakePancakes
+
+if intelligence > 4 display desc1
+else if intelligence < 5 && endurance > 4 display desc2
+else display desc3
+
+desc1: You grab the pancake mix out of the cabinet and get it ready to pour. Carefully making three separate pancake blobs in your pan, you continue to carefully
+follow the directions that came with the box until they are finished. You remove the crispy golden delights and place them on a plate before adding any extra toppings
+and sweetness that you desire. Cutting into the tasty treat, you take a satisfying bite of your masterpiece before resolving to savour every bite afterwards
+as you enjoy your creation.
+
+op1: The end. -> GoodEND
+---
+
+desc2: You grab the pancake mix out of the cabinet and get it ready to pour. Unfortunately, you have completely misread the instructions that came with the box.
+Your rather... uninspiring intelligence has doomed your endeavor to end poorly right from the start. You do your best to follow what you believed the directions to
+say before eventually finishing your "pancakes." You are left with 3 extremely dry, pretty burnt, and all-around displeasing to witness masses of what was meant
+to be pancakes. You poke one with a fork and take a bite...
+
+op1: The end. -> BadEND
+---
+
+desc3: You grab the pancake mix out of the cabinet and get it ready to pour. Unfortunately, you have completely misread the instructions that came with the box.
+Your rather... uninspiring intelligence has doomed your endeavor to end poorly right from the start. You do your best to follow what you believed the directions to
+say before eventually finishing your "pancakes." You are left with 3 extremely dry, pretty burnt, and all-around displeasing to witness masses of what was meant
+to be pancakes. You poke one with a fork and take a bite...
+
+Oh no, that is absolutely atrocious! You feel your mouth immediately dry out from the abomination you recklessly entered into it. As a matter of fact, the pancake
+is SO dry that its absorptive capabilties do not stop. It sticks to the inside of your mouth and refuses to leave as it siphons all hydration from your body. What
+did you do to create this pancake of mass destruction? Will it be satiated with only your liquid provision, or will this vile creation move on to take over part of
+if not the entire world? Well, that is for others to find out, as your evil pancake invention has taken too much of your body's water supply to properly function. 
+You collapse to the floor, lifeless, with a still dry and sticky pancake stuck to the inside of your mouth.
+
+THE END.
+---
+
+###
+
+Scene ToastAndBacon
+
+if perception > 4 display desc1
+else display desc2
+
+desc1: You make your way around the kitchen collecting the items you'll need to prepare your food. You grab a skillet for cooking your food as well.
+You place your skillet on the stove top and turn it on. You carefully cook your bacon while keeping a close eye to make sure you don't burn it.
+You butter up your toast and do the same for it. Before long you have a delicious looking meal that would make just about anyone that enjoys well-made food's mouth
+water with anticipation. You slowly raise a piece of food to your lips before taking your first satisfingly crunchy bite.
+
+op1: The end. -> GoodEND
+---
+
+desc2: You make your way around the kitchen collecting the items you'll need to prepare your food. You grab a skillet for cooking your food as well.
+You place your skillet on the stove top and turn it on. You begin to cook the food without taking much time to look at how long you've cooked it and regularly
+failing to check how cooked your food actually is. By the time you've finished preparing the food, you are left with a plate of black charred items that seem to
+have the vague shape of what used to be bacon and toast. You raise one of these charcoal wonders of human creation (and not in a good way) and take a bite. 
+Mmmm. Tastes like sadness.
+
+op1: The end. -> BadEND
+---
+
+###
+
+Scene MakeCereal
+
+if intelligence > 3 display desc1
+else if intelligence <= 3 && endurance <= 3 display desc3
+else display desc2
+
+if intelligence < 3 && endurance < 3 display desc3
+
+desc1: You take the milk and cereal out of the fridge and cabinet respectively. You go and grab a bowl, but before you get too far, you realize that
+this milk is actually out of date. That was close! Throwing that milk out, you open the fridge back up and take out the one you recently purchased.
+You pour the cereal in the bowl first (like a normal person...) and then fill it with some milk. You grab a spoon and dig in!
+
+op1: The end. -> GoodEND
+---
+
+desc2: You take the milk and cereal out of the fridge and cabinet respectively. You go and grab a bowl and pour some cereal into it. You then grab the milk and
+start to pour it in as well. Due to your, uh, lackluster deductional skills, you don't even mind the chunks pouring out of the container along with the rest
+of the "milk". Once you are satisfied with your cereal to milk ratio, you grab a spoon and dig in! ...but then you realize something is terribly wrong.
+
+op1: The end -> BadEND
+---
+
+desc3: You take the milk and cereal out of the fridge and cabinet respectively. You go and grab a bowl and pour some cereal into it. You then grab the milk and
+start to pour it in as well. Due to your, uh, lackluster deductional skills, you don't even mind the chunks pouring out of the container along with the rest
+of the "milk". Once you are satisfied with your cereal to milk ratio, you grab a spoon and dig in! ...but then you realize something is terribly wrong.
+
+The milk was so horribly out of date that your incredibly weak constitution just could not handle it. You can feel your body begin to shut down. The life slowly fades
+from your body as you glance towards the container that held your demise. The final thing your mortal body witnesses is the expiration date that lists several 
+months prior. As you fade away, you can't help but think, "Why was that still even in my fridge?"...
+
+You are dead. Perhaps you should have gotten breakfast in a different way... or at maybe you should work on that endurance. Yikes.
+
+THE END
+---
+
+###
+
+Scene GoodEND
+
+desc1: Congragulations! You successfully took on the world and achieved your admirable goal of devouring a delicious breakfast.
+There are many other ways for you to aquire a different breakfast too though. Another time, perhaps. Another time.
+
+THE END
+---
+
+###
+
+Scene BadEND
+
+desc1: Well, that wasn't very good. Sure, you did eat breakfast... but at what cost? How much of your humanity did you have to sacrifice to achieve this goal?
+There are so many other ways you could have gotten a different breakfast, but here we are. Maybe you can do better another time.
+
+THE END
+---
+
+###
