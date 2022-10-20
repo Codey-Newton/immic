@@ -79,7 +79,7 @@ def divide_screen(stdscr):
     h, w = stdscr.getmaxyx()
 
     character_win = curses.newwin(h, w//4, 0, 0)
-    story_win = curses.newwin(h//2-1, w//2+27, 0, w//4+3)
+    story_win = curses.newwin(h//2-1, w//4+27, 0, w//4+3)
     choices_win = curses.newwin(h//2-1, w//2+27, h//2+1, w//4+3)
     border_win = curses.newwin(h, 3, 0, w//4)
     border2_win = curses.newwin(3, w//2+27, h//2-1, w//4+2)
@@ -92,7 +92,7 @@ def divide_screen(stdscr):
         #choices_win.clear()
         for i in range(h):
             border_win.addstr(i, 0,"||")
-        for i in range(87):
+        for i in range(w//2+27):
             border2_win.addstr(0, i,"_")
         character_win.addstr("HELOOOOOOOOOOOOOOOOOOOO")
         story_win.addstr(3, 8, Line)
@@ -139,7 +139,7 @@ def divide_screen(stdscr):
                 if k == 48:
                     Input = k - 48
                 elif k == 49:
-                    Input = k - 49
+                    Input = k - 48
                 break
             else:
                 choices_win.addstr(10, 8, chr(k))
@@ -245,7 +245,6 @@ def get_response(story: dict, curr_scene: int):
         #curses.wrapper(divide_screen, options)
         valid_inputs = [str(num) for num in range(1)]
         option_index = int(get_input(valid_inputs))
-
         # parse the option string using re's to find integers contained
         # in [ ], (must be integers in [ ]).
         # and save the value in a variable.
@@ -277,14 +276,19 @@ def story_flow(story: dict):
 
     if scene == None:
       curr_scene = None
-      break
+      return 1
 
     display_scene_text(story['adventure']['scene'][curr_scene]['dialog'])
 
     # if a option contains nothing, or returns None, break form the loop.
     if story['adventure']['scene'][curr_scene]['options'] == None:
+      global Options
+      Options.clear()
+      display_scene_text(story['adventure']['scene'][curr_scene]['dialog'])
+      Options.append("End Of The Story, To exit press 0")
       curr_scene = None
-      break
+      curses.wrapper(divide_screen)
+      return 1
 
     curr_scene = get_response(story, curr_scene)
 
@@ -293,22 +297,27 @@ def story_flow(story: dict):
 
 
 
-def main():
+def main(stdscr):
+    flag = 0
+    while flag != 1:
+
+        stdscr.clear()
+
+        stdscr.refresh()
+        curses.curs_set(0)
       # Open the file and read the contents into my_xml
       # arg1: file name, arg2: r(read), arg3: encoding type
-    with open('debugAdventure.xml', 'r', encoding='utf-8') as file:
-        my_xml = file.read()
+        with open('debugAdventure.xml', 'r', encoding='utf-8') as file:
+            my_xml = file.read()
 
       # Use xmltodict to parse and convert
       # the XML document
-    story = xmltodict.parse(my_xml, namespace_separator=True)
-    story_flow(story)
-    #strings = "HELOO!"
-    #curses.wrapper(divide_screen, strings)
+        story = xmltodict.parse(my_xml, namespace_separator=True)
+        flag = story_flow(story)
 
 
 if __name__ == "__main__":
-    main()
+    curses.wrapper(main)
 
 
 # height = 30
