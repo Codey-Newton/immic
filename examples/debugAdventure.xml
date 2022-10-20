@@ -13,6 +13,7 @@
 			You chose the 1st choice. This is scene 1.
 		</dialog>
 		<options> End the game [5] </options>
+		<options> jump to scene 1 [0] </options>
 	</scene>
 	<scene> <!-- Scene 2 -->
 		<dialog>

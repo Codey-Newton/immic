@@ -31,19 +31,21 @@ def get_response(story: dict, curr_scene: int):
         # in [ ], (must be integers in [ ]).
         # and save the value in a variable.
         # N: use re library thats built in to python
-        scene_jump_match = re.search(pattern = "(?<=\[)[0-9]+(?=\])", string = story['adventure']['scene'][curr_scene]['options'])
-        print(scene_jump_match.group())
+        scene_jump_match = re.search(pattern = "(?<=\[)[0-9]+(?=\])", \
+        string = story['adventure']['scene'][curr_scene]['options'])
+        #print(scene_jump_match.group())
 
     # do everything above exept with more than one option
     else:
       for i in range(len(story['adventure']['scene'][curr_scene]['options'])):
         print(str(i) + ". " + story['adventure']['scene'][curr_scene]['options'][i]) 
       valid_inputs = [str(num) for num in range(len(story['adventure']['scene'][curr_scene]['options']))]
-      print(valid_inputs)
+      #print(valid_inputs)
       option_index = int(get_input(valid_inputs))
-      print(option_index)
-      scene_jump_match = re.search(pattern = "(?<=\[)[0-9]+(?=\])", string = story['adventure']['scene'][curr_scene]['options'][option_index])
-      print(scene_jump_match.group())
+      #print(option_index)
+      scene_jump_match = re.search(pattern = "(?<=\[)[0-9]+(?=\])", \
+      string = story['adventure']['scene'][curr_scene]['options'][option_index])
+      #print(scene_jump_match.group())
   
 
     return int(scene_jump_match.group())
