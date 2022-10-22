@@ -1,18 +1,67 @@
-from secrets import choice
 
+def get_input(valid_input: list):
+        while True:
+            print ("Enter ", valid_input)
+            Input = input()
+            if Input not in valid_input:
+                print("\nInvalid input. Please use one of the following inputs:")
+                print(valid_input)
+                Input = None
+            else:
+             return Input 
 
+def redistribute(A_stat, tmp_points = 0):
+    valid_point_input = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+    valid_oper_choice = ['+', 'n']
+    stat = A_stat
+    tmp_stat = stat
+
+    if (tmp_points == 0 ):
+        print("Points to redistribute: ") 
+        tmp_points = int(get_input(valid_point_input))
+        stat -= tmp_points
+        print(stat)
+        if(stat < 1):
+            print(tmp_stat)
+            stat = tmp_stat
+            tmp_points = 0
+            print("point limit reached!")
+
+    elif(stat < 1):
+        stat = tmp_stat
+        tmp_points = 0
+        print("point limit reached!")
+
+    else:
+        oper_choice = input("Do you want to add points or nothing: [+, n]")
+        if(oper_choice == "+"):
+            stat += tmp_points
+            if (stat > 10):
+                stat = tmp_stat
+                print("point limit reached!")
+                
+            else:
+                tmp_points = 0
+                print(stat)
+        elif(oper_choice == "n"):
+            print()
+
+    result = [tmp_points, stat]
+    return(result)
+#-----------------------------------------------------------------------------
 class Character(object):
 
-
     def __init__(self, name):
-        name = name
+        self.name = name
         self.Agile  = ["A", 5]
         self.Brain  = ["B", 5]
         self.Charm  = ["C", 5]
         self.Detect = ["D", 5]
         self.Endure = ["E", 5]
         self.Points = ["P", 5]
-
+#-------------------------------------------------------------------------------
+# METHODS
+# ------------------------------------------------------------------------------
     def skill_check(self, str):
         print("in skill_check")
         stat = str[0]
@@ -26,93 +75,60 @@ class Character(object):
             print("yes")
             self.Agile[1] = check
             print(self.Agile[1])
-        
-
+            
     def setupPoints(self):
-        print("in setup")
-        valid_stat_input = ['A','B','C','D','E', 'P']
-        tmp_stat = 0 
+        print("in setup\n")
+        valid_stat_input =  ['A','B','C','D','E','P']
+        stat_list = [self.Agile[1], self.Brain[1], self.Charm[1], self.Detect[1], self.Endure[1], self.Points[1]]
+        stat_results = []
+        print(stat_list[0])
         tmp_points = 0
-        oper_choice = ""
         AreUdone = ""
+
         while AreUdone != 'y':
 
             #check input
-            stat = input("Enter stat: [A,B,C,D,E]: " )
-            while stat not in valid_stat_input:
-                print("Invalid input. Please use one of the following inputs:\n")
-                print(valid_stat_input)
-            
+            stat = get_input(valid_stat_input)
+
             match stat:
                 case 'A':
-                    tmp_stat = self.Agile[1]
-                    if (tmp_points == 0):
-                        tmp_points = int(input("Points to redistribute: "))
-                        if(self.Agile[1] <= 1):
-                            self.Agile[1] = tmp_stat
-                            tmp_points = 0
-                            print("point limit reached!")
-                        else:
-                            self.Agile[1] -= tmp_points
+                    stat_results = redistribute(stat_list[0], tmp_points)
+                    tmp_points = stat_results[0]
+                    stat_list[0] = stat_results[1]
+                    self.Agile[1] = stat_list[0]
 
-                    elif(self.Agile[1] < 1):
-                        self.Agile[1] = tmp_stat
-                        tmp_points = 0
-                        print("point limit reached!")
-
-                    else:
-                        oper_choice = input("Do you want to add points or nothing: [+, n]")
-
-                        if(oper_choice == "+"):
-                            self.Agile[1] += tmp_points
-                            if (self.Agile[1] > 10):
-                                self.Agile[1] = tmp_stat
-                                print("point limit reached!")
-                                
-                            else:
-                                tmp_points = 0
-                                print(self.Agile[1])
-
-                        elif(oper_choice == "n"):
-                            print() 
                 case 'B':
-                    tmp_stat = self.Brain[1]
-                    if (tmp_points == 0):
-                        tmp_points = int(input("Points to redistribute: "))
-                        self.Brain[1] -= tmp_points
+                    stat_results = redistribute(stat_list[1], tmp_points)
+                    tmp_points = stat_results[0]
+                    stat_list[1] = stat_results[1]
+                    self.Brain[1] = stat_list[1]
 
-                    elif(self.Brain[1] < 1):
-                        self.Brain[1] = tmp_stat
-                        tmp_points = 0
-                        print("point limit reached!")
+                case 'C':
+                    stat_results = redistribute(stat_list[2], tmp_points)
+                    tmp_points = stat_results[0]
+                    stat_list[2] = stat_results[1]
+                    self.Charm[1] = stat_list[1]
 
-                    else:
-                        oper_choice = input("Do you want to add points or nothing: [+, n]")
-
-                        if(oper_choice == "+"):
-                            self.Brain[1] += tmp_points
-                            if (self.Brain[1] > 10):
-                                self.Brain[1] = tmp_stat
-                                print("point limit reached!")
-                                
-                            else:
-                                tmp_points = 0
-                                print(self.Brain[1])
-
-
-                        elif(oper_choice == "n"):
-                            print() 
+                case 'D':
+                    stat_results = redistribute(stat_list[3], tmp_points)
+                    tmp_points = stat_results[0]
+                    stat_list[3] = stat_results[1]
+                    self.Detect[1] = stat_list[1]
+                
+                case 'E':
+                    stat_results = redistribute(stat_list[4], tmp_points)
+                    tmp_points = stat_results[0]
+                    stat_list[4] = stat_results[1]
+                    self.Endure[1] = stat_list[1]
+                
+               
 
             AreUdone = input("Are done with character setup?: [y, n]: ")
-    
-        
-        
-
-
+#-------------------------------------------------------------------------------    
 if __name__=='__main__': 
     name1 = input("Please enter your character's name:")
     Player = Character(name1)
+    print(Player.name)
     skillz = "A75"
     Player.setupPoints()
-    Player.skill_check(skillz)
-    print(Player.Agile)
+    print(Player.Agile, Player.Brain)
