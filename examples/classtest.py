@@ -1,28 +1,25 @@
 
 def get_input(valid_input: list):
-        while True:
-            print ("Enter ", valid_input)
-            Input = input()
-            if Input not in valid_input:
-                print("\nInvalid input. Please use one of the following inputs:")
-                print(valid_input)
-                Input = None
-            else:
-             return Input 
+    while True:
+        print ("Enter ", valid_input)
+        Input = input()
+        if Input not in valid_input:
+            print("\nInvalid input. Please use one of the following inputs:")
+            print(valid_input)
+            Input = None
+        else:
+         return Input 
 
 def redistribute(A_stat, tmp_points = 0):
     valid_point_input = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
-    valid_oper_choice = ['+', 'n']
     stat = A_stat
     tmp_stat = stat
 
     if (tmp_points == 0 ):
-        print("Points to redistribute: ") 
+        print("\nPoints to redistribute: ") 
         tmp_points = int(get_input(valid_point_input))
         stat -= tmp_points
-        print(stat)
         if(stat < 1):
-            print(tmp_stat)
             stat = tmp_stat
             tmp_points = 0
             print("point limit reached!")
@@ -33,7 +30,7 @@ def redistribute(A_stat, tmp_points = 0):
         print("point limit reached!")
 
     else:
-        oper_choice = input("Do you want to add points or nothing: [+, n]")
+        oper_choice = input("Do you want to add points or nothing: [+, n] ")
         if(oper_choice == "+"):
             stat += tmp_points
             if (stat > 10):
@@ -42,7 +39,6 @@ def redistribute(A_stat, tmp_points = 0):
                 
             else:
                 tmp_points = 0
-                print(stat)
         elif(oper_choice == "n"):
             print()
 
@@ -81,7 +77,6 @@ class Character(object):
         valid_stat_input =  ['A','B','C','D','E','P']
         stat_list = [self.Agile[1], self.Brain[1], self.Charm[1], self.Detect[1], self.Endure[1], self.Points[1]]
         stat_results = []
-        print(stat_list[0])
         tmp_points = 0
         AreUdone = ""
 
@@ -107,23 +102,25 @@ class Character(object):
                     stat_results = redistribute(stat_list[2], tmp_points)
                     tmp_points = stat_results[0]
                     stat_list[2] = stat_results[1]
-                    self.Charm[1] = stat_list[1]
+                    self.Charm[1] = stat_list[2]
 
                 case 'D':
                     stat_results = redistribute(stat_list[3], tmp_points)
                     tmp_points = stat_results[0]
                     stat_list[3] = stat_results[1]
-                    self.Detect[1] = stat_list[1]
+                    self.Detect[1] = stat_list[3]
                 
                 case 'E':
                     stat_results = redistribute(stat_list[4], tmp_points)
                     tmp_points = stat_results[0]
                     stat_list[4] = stat_results[1]
-                    self.Endure[1] = stat_list[1]
+                    self.Endure[1] = stat_list[4]
                 
                
-
-            AreUdone = input("Are done with character setup?: [y, n]: ")
+            if (tmp_points > 0): 
+                print() 
+            else: 
+                AreUdone = input("Are done with character setup?: [y, n]: ")
 #-------------------------------------------------------------------------------    
 if __name__=='__main__': 
     name1 = input("Please enter your character's name:")
@@ -131,4 +128,5 @@ if __name__=='__main__':
     print(Player.name)
     skillz = "A75"
     Player.setupPoints()
-    print(Player.Agile, Player.Brain)
+    print(Player.Agile, Player.Brain, \
+    Player.Charm, Player.Detect, Player.Endure)
