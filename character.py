@@ -88,19 +88,73 @@ class Character(object):
     # -------------------------------------------------------------------------------
     # METHODS
     # ------------------------------------------------------------------------------
-    def skill_check(self, str):
-        print("in skill_check")
-        stat = str[0]
-        print(stat)
-        check = int(str[1])
-        print(check)
-        scene_jump = int(str[2])
-        print(scene_jump)
+       def skill_check(self, str):
 
-        if (self.Agile[0] == stat):
-            print("yes")
-            self.Agile[1] = check
-            print(self.Agile[1])
+        print("in skill_check")
+        tmpstat = 0
+        diceroll = random.randint(1, 9)
+        stat = str[0]
+        check = int(str[1])
+        scene_jump = int(str[2])
+        print(" Dice roll number: ", diceroll)
+        if(stat == self.Agile[0]):
+            print("Agility check! ")
+            if (self.Agile[1] > check):
+                tmpstat += self.Agile[1] - diceroll
+                if(tmpstat > check):
+                    print("You have passed the skill check!")
+                    return scene_jump
+                else:
+                    print( "You have failed the skill check!")
+                    return 'F'
+            else:
+                print("You have failed the skill check!")
+                return 'F'
+        elif(stat == self.Brain[0]):
+            print("Brain Check! ")
+            if (self.Brain[1] > check):
+                    tmpstat += self.Brain[1] - diceroll
+                    if (tmpstat > check):
+                        print("You have passed the skill check!")
+                        return scene_jump
+                    else:
+                        print("You have failed the skill check!")
+                        return 'F'
+            else:
+                print("You have failed the skill check!")
+                return 'F'
+        elif(stat == self.Charm[0]):
+            print("Charm Check!")
+            if(self.Charm[1] > check):
+                tmpstat += self.Charm[1] - diceroll
+                if (tmpstat > check):
+                    print("You have passed the skill check!")
+                    return scene_jump
+                else:
+                    print("You have failed the skill check!")
+                    return 'F'
+        elif (stat == self.Detect[0]):
+            print("Detect Check!")
+            if (self.Detect[1] > check):
+                tmpstat += self.Detect[1] - diceroll
+                if (tmpstat > check):
+                    print("You have passed the skill check!")
+                    return scene_jump
+                else:
+                    print("You have failed the skill check!")
+                    return 'F'
+        elif (stat == self.Endure[0]):
+            print("Endure Check!")
+            if (self.Endure[1] > check):
+                tmpstat += self.Endure[1] - diceroll
+                if (tmpstat > check):
+                    print("You have passed the skill check!")
+                    return scene_jump
+                else:
+                    print("You have failed the skill check!")
+                    return 'F'
+        else:
+            print("Not an Attribute!")
 
     def setupPoints(self):
         print("in setup\n")
