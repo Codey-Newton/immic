@@ -10,7 +10,17 @@
 	</scene>
 	<scene> <!-- Scene 1 -->
 		<dialog>
-			You chose the 1st choice. This is scene 1.
+	You grab the pancake mix out of the cabinet and get it ready to pour. Unfortunately, you have completely misread the instructions that came with the box.
+Your rather... uninspiring intelligence has doomed your endeavor to end poorly right from the start. You do your best to follow what you believed the directions to
+say before eventually finishing your "pancakes." You are left with 3 extremely dry, pretty burnt, and all-around displeasing to witness masses of what was meant
+to be pancakes. You poke one with a fork and take a bite...
+
+Oh no, that is absolutely atrocious! You feel your mouth immediately dry out from the abomination you recklessly entered into it. As a matter of fact, the pancake
+is SO dry that its absorptive capabilties do not stop. It sticks to the inside of your mouth and refuses to leave as it siphons all hydration from your body. What
+did you do to create this pancake of mass destruction? Will it be satiated with only your liquid provision, or will this vile creation move on to take over part of
+if not the entire world? Well, that is for others to find out, as your evil pancake invention has taken too much of your body's water supply to properly function. 
+You collapse to the floor, lifeless, with a still dry and sticky pancake stuck to the inside of your mouth.
+
 		</dialog>
 		<options> End the game [5] </options>
 		<options> jump to scene 1 [0] </options>
