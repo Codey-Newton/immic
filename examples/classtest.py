@@ -1,7 +1,7 @@
 
 def get_input(valid_input: list):
+    print ("Enter ", valid_input)
     while True:
-        print ("Enter ", valid_input)
         Input = input()
         if Input not in valid_input:
             print("\nInvalid input. Please use one of the following inputs:")
@@ -12,6 +12,7 @@ def get_input(valid_input: list):
 
 def redistribute(A_stat, tmp_points = 0):
     valid_point_input = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+    valid_oper_input = ['+', 'n']
     stat = A_stat
     tmp_stat = stat
 
@@ -30,7 +31,8 @@ def redistribute(A_stat, tmp_points = 0):
         print("point limit reached!")
 
     else:
-        oper_choice = input("Do you want to add points or nothing: [+, n] ")
+        print("Do you want to add points or nothing?")
+        oper_choice = get_input(valid_oper_input)
         if(oper_choice == "+"):
             stat += tmp_points
             if (stat > 10):
