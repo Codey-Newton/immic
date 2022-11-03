@@ -357,7 +357,8 @@ def main(stdscr):
 
       # Open the file and read the contents into my_xml
       # arg1: file name, arg2: r(read), arg3: encoding type
-        with open('debugAdventure.xml', 'r', encoding='utf-8') as file:
+        input_file = sys.argv(1)
+        with open(input_file, 'r', encoding='utf-8') as file:
             my_xml = file.read()
 
       # Use xmltodict to parse and convert
