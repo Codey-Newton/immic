@@ -5,7 +5,6 @@ import re
 import time
 import character as ch
 import pickle
-import definitions as cc
 #--------------------------------------------------------
 # global variables
 #--------------------------------------------------------
@@ -369,6 +368,5 @@ def main(stdscr):
 
 if __name__ == "__main__":
     Player.name = "john"
-    cc.terminal_colors()
     curses.wrapper(main)
     
