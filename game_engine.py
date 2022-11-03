@@ -5,6 +5,7 @@ import re
 import time
 import character as ch
 import pickle
+import definitions as cc
 #--------------------------------------------------------
 # global variables
 #--------------------------------------------------------
@@ -145,7 +146,7 @@ def divide_screen(stdscr):
                 break
             else:
                 choices_win.addstr(10, 8, chr(k))
-                choices_win.addstr(10, 12, "Invalid input. Only 0 is valid", curses.color_pair(30))
+                choices_win.addstr(10, 12, "Invalid input. Only 0 is valid", curses.color_pair(161))
         if len(Options) == 2:
             choices_win.addstr(2, 8, Options[0])
             choices_win.addstr("\n")
@@ -236,7 +237,7 @@ def divide_screen(stdscr):
                 break
             else:
                 choices_win.addstr(10, 8, chr(k))
-                choices_win.addstr(10, 12, "Invalid input. Only numbers [0, 1, 2, 3] are valid")
+                choices_win.addstr(10, 12, "Invalid input. Only numbers [0, 1, 2, 3] are valid", curses.color_pair(161))
 
 
 
@@ -336,11 +337,13 @@ def story_flow(story: dict):
 
 
 def main(stdscr):
+    
     # initiate colors
     curses.start_color()
     curses.use_default_colors()
     for i in range(0, curses.COLORS):
         curses.init_pair(i + 1, i, -1)
+
     flag = 0
     #urses.resizeterm(60, 240)
     stdscr.border()
@@ -365,5 +368,6 @@ def main(stdscr):
 
 if __name__ == "__main__":
     Player.name = "john"
+    cc.terminal_colors()
     curses.wrapper(main)
     
