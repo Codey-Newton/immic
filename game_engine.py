@@ -8,6 +8,8 @@ import pickle
 #--------------------------------------------------------
 # global variables
 #--------------------------------------------------------
+story={}
+story_name = "immic"
 Line= "HELOOOO"
 Options = []
 Input = 999
@@ -15,13 +17,16 @@ Player = ch.Character()
 color_dialog = 0
 color_options = 0
 color_boarder = 0
+color_title_boarder = 0
 ##########################################################
 
 #----------------------------------------------------------
 # pause screen + screen boxes                             |
 #----------------------------------------------------------
 def print_pause_menu(stdscr):
+    
     global Player
+
     #array with
     menu = ['Resume', 'Save', 'Load', 'Home', 'Exit']
 
@@ -274,11 +279,11 @@ def display_scene_text(dialog: str):
   #print("\n")
 
 def save_story(Player:ch.Character):
-    with open('Player.pickle', 'wb') as f:
+    with open(f"./saves/{story_name}", 'wb') as f:
         pickle.dump(Player, f)
 
 def load_story(Player:ch.Character):
-    with open('Player.pickle', 'rb') as f:
+    with open(f"./saves/{story_name}", 'rb') as f:
         Player = pickle.load(f)
     return Player
     
@@ -359,7 +364,7 @@ def story_flow(story: dict):
 
 
 def main(stdscr):
-    
+    global story_name
     # initiate colors
     curses.start_color()
     curses.use_default_colors()
@@ -377,22 +382,24 @@ def main(stdscr):
         stdscr.refresh()
         curses.curs_set(0)
 
-      # Open the file and read the contents into my_xml
-      # arg1: file name, arg2: r(read), arg3: encoding type
         input_arg = sys.argv[1]
         if input_arg == '-c':
             terminal_colors()
+
+      # Open the file and read the contents into my_xml
+      # arg1: file name, arg2: r(read), arg3: encoding type
         else: 
             with open(input_arg, 'r', encoding='utf-8') as file:
                 my_xml = file.read()
-
+    
       # Use xmltodict to parse and convert
       # the XML document
         story = xmltodict.parse(my_xml, namespace_separator=True)
+        if 'title' in story['adventure']['scene'][0]:
+            story_name = story['adventure']['scene'][0]['title'] + "_save"
         flag = story_flow(story)
 
-
+    
 if __name__ == "__main__":
-    Player.name = "john"
     curses.wrapper(main)
     
