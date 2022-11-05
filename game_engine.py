@@ -245,6 +245,29 @@ def divide_screen(stdscr):
 #-----------------------------------------------------
 # main story + color/pic functions                   |
 #-----------------------------------------------------
+def terminal_colors():
+    def main(stdscr):
+        curses.start_color()
+        curses.use_default_colors()
+        for i in range(0, curses.COLORS):
+            curses.init_pair(i + 1, i, -1)
+        stdscr.addstr(0, 0, '{0} colors available'.format(curses.COLORS))
+        maxy, maxx = stdscr.getmaxyx()
+        maxx = maxx - maxx % 5
+        x = 0
+        y = 1
+        try:
+            for i in range(0, curses.COLORS):
+                stdscr.addstr(y, x, '{0:5}'.format(i), curses.color_pair(i))
+                x = (x + 5) % maxx
+                if x == 0:
+                    y += 1
+        except curses.ERR:
+            pass
+        stdscr.getch()
+        exit(0) 
+    curses.wrapper(main)
+
 def display_scene_text(dialog: str):
   global Line
   Line = dialog
@@ -356,9 +379,12 @@ def main(stdscr):
 
       # Open the file and read the contents into my_xml
       # arg1: file name, arg2: r(read), arg3: encoding type
-        input_file = sys.argv(1)
-        with open(input_file, 'r', encoding='utf-8') as file:
-            my_xml = file.read()
+        input_arg = sys.argv[1]
+        if input_arg == '-c':
+            terminal_colors()
+        else: 
+            with open(input_arg, 'r', encoding='utf-8') as file:
+                my_xml = file.read()
 
       # Use xmltodict to parse and convert
       # the XML document
