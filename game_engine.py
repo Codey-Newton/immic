@@ -8,8 +8,8 @@ import pickle
 #--------------------------------------------------------
 # global variables
 #--------------------------------------------------------
-story={}
-story_name = "immic"
+save_name = "immic"
+Picture = ""
 Line= "HELOOOO"
 Options = []
 Input = 999
@@ -24,7 +24,7 @@ color_title_boarder = 0
 # pause screen + screen boxes                             |
 #----------------------------------------------------------
 def print_pause_menu(stdscr):
-    
+
     global Player
 
     #array with
@@ -72,6 +72,8 @@ def print_pause_menu(stdscr):
                 break
             elif current_row == len(menu)-3:
                 Player = load_story(Player)
+                if Player == 1:
+                    exit("missing save file!!!")
                 break
             #elif current_row == len(menu)-2:
                 #curses.wrapper(start_menu)
@@ -279,12 +281,15 @@ def display_scene_text(dialog: str):
   #print("\n")
 
 def save_story(Player:ch.Character):
-    with open(f"./saves/{story_name}", 'wb') as f:
+    with open(f"./saves/{save_name}", 'wb') as f:
         pickle.dump(Player, f)
 
 def load_story(Player:ch.Character):
-    with open(f"./saves/{story_name}", 'rb') as f:
-        Player = pickle.load(f)
+    try:
+        with open(f"./saves/{save_name}", 'rb') as f:
+            Player = pickle.load(f)
+    except FileNotFoundError:
+            return 1
     return Player
     
 #checks to see if your input is in the valid_inputs list
@@ -301,6 +306,7 @@ def get_input(valid_input: list):
 def get_response(story: dict, curr_scene: int):
 
     global Options
+    skill_check = 0
     Options.clear()
     # if there are more than 4 options, its actually a single option,
     # but it counts the individual characters.
@@ -323,12 +329,12 @@ def get_response(story: dict, curr_scene: int):
       for i in range(len(story['adventure']['scene'][curr_scene]['options'])):
         Options.append((str(i) + ". " + story['adventure']['scene'][curr_scene]['options'][i]))
       valid_inputs = [str(num) for num in range(len(story['adventure']['scene'][curr_scene]['options']))]
-      #print(valid_inputs)
+      
       option_index = int(get_input(valid_inputs))
-      #print(option_index)
+     
       scene_jump_match = re.search(pattern = "(?<=\[)[0-9]+(?=\])", string = story['adventure']['scene'][curr_scene]['options'][option_index])
-      #print(scene_jump_match.group())
-
+      skill_check = re.search(pattern = "(?<=\{) (?=\})", string = story['adventure']['scene'][curr_scene]['options'][option_index])
+      
 
     return int(scene_jump_match.group())
 
@@ -364,7 +370,7 @@ def story_flow(story: dict):
 
 
 def main(stdscr):
-    global story_name
+
     # initiate colors
     curses.start_color()
     curses.use_default_colors()
@@ -372,34 +378,45 @@ def main(stdscr):
         curses.init_pair(i + 1, i, -1)
 
     flag = 0
-    #urses.resizeterm(60, 240)
+   
     stdscr.border()
     stdscr.refresh()
     while flag != 1:
-
         stdscr.clear()
-
         stdscr.refresh()
         curses.curs_set(0)
-
-        input_arg = sys.argv[1]
-        if input_arg == '-c':
-            terminal_colors()
-
-      # Open the file and read the contents into my_xml
-      # arg1: file name, arg2: r(read), arg3: encoding type
-        else: 
-            with open(input_arg, 'r', encoding='utf-8') as file:
-                my_xml = file.read()
-    
-      # Use xmltodict to parse and convert
-      # the XML document
-        story = xmltodict.parse(my_xml, namespace_separator=True)
-        if 'title' in story['adventure']['scene'][0]:
-            story_name = story['adventure']['scene'][0]['title'] + "_save"
         flag = story_flow(story)
 
     
 if __name__ == "__main__":
+    error_message = ""
+    input_arg = sys.argv[1]
+    if input_arg == '-c':
+        terminal_colors()
+
+      # Open the file and read the contents into my_xml
+      # arg1: file name, arg2: r(read), arg3: encoding type
+    else: 
+        with open(input_arg, 'r', encoding='utf-8') as file:
+            my_xml = file.read()
+
+    # Use xmltodict to parse and convert
+    # the XML document
+    story = xmltodict.parse(my_xml, namespace_separator=True)
+
+    # check to see if title tag is in scene 0 + initialization
+    if 'title' in story['adventure']['scene'][0]:
+        Picture = story['adventure']['scene'][0]['title']
+    else:
+        print("missing title tag")
+        exit(0)
+
+    # check to see if save tag is in scene 0 + initialization
+    if 'save_name' in story['adventure']['scene'][0]:
+        save_name = story['adventure']['scene'][0]['save_name'] + "_save"
+    else: 
+        print("missing save_name tag!!!")
+        exit(0)
+
     curses.wrapper(main)
     
