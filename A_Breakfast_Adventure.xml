@@ -21,15 +21,30 @@
 			 How do you choose to go downstairs?
 		</dialog>
 		<options> Use bedroom door {D1 BedDoor1} [BedDoor2] </options>
-<!--		<options> Use bedroom window. [BedWindow] </options> -->
+		<options> Use bedroom window. {A4 BedWindow1} [BedWindow2] </options>
 	</scene>
+	<scene> <!-- BedWindow1 -->
+		<dialog>
+			For some reason, you have decided to exit your bedroom using your window. Carefully raising it up, you step onto your roof. Slowly making your way to the edge, you jump off.
+
+			Surprisingly, you manage to navigate your jump rather well. You land harmlessly on the ground with minimal inconvienence. Heading inside, you figure it's time to decide what you actually want to eat.
+		</dialog>
+		<options> Go to kitchen. [MakeFood] </options>
+		<optoins> Get your keys. [GetFood] </optoins>
+	</scene>
+	<scene> <!-- BedWindow2 -->
+		<dialog>
+			For some reason, you have decided to exit your bedroom using your window. Carefully raising it up, you step onto your roof. Slowly making your way to the edge, you jump off.
+
+			Unsurprisingly, you did not navigate your jump very well. You smack into a tree branch almost immediately which sends you into a backwards spiral in which you land directly on to your head. You are knocked unconscious and severely injured. I don't know why you tried doing that. Hopefully a passer-by notices you and calls an ambulance...
+
+			THE END
 	<scene> <!-- BedDoor1 -->
 		<dialog>
 			You notice that the staircase has been recently polished and waxed. "Who would polish and wax my hardwood stairs?" you wonder to yourself. Anyway, you decide to take it slowly down them as to not injure yourself. Once you get to the bottom, you deem it time to decide what you actually want to eat.
 		</dialog>
 		<options> Go to kitchen. [MakeFood] </options>
 		<options> Get your keys. [GetFood] </options>
-<!--		<options> Grab your phone. [OrderFood] </options> -->
 	</scene>
 	<scene> <!-- BedDoor2 -->
 		<dialog>
@@ -39,7 +54,6 @@
 		</dialog>
 		<options> Go to kitchen. [MakeFood] </options>
 		<options> Get your keys. [GetFood] </options>
-<!--		<options> Grab your phone. [OrderFood] </options> -->
 	</scene>
 	<scene> <!-- GetFood -->
 		<dialog>
@@ -47,11 +61,91 @@
 
 			So you head out the front door. Open the garage door. Then you open the car doors. And you get in those car doors. Put your key in the ignition. And then you turn it sideways. Then you fasten your seat belt. As you pull out the driveway.
 
-			Now that your on the road, what are you in the mood for?
+			Now that you're on the road, what are you in the mood for?
 
 		</dialog>
 		<options> Dine-in cafe. [DineIn] </options>
-<!--		<options> Fast food drive-thru. [DriveThru] </options> !!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+		<options> Fast food drive-thru. [DriveThru] </options>
+	</scene>
+	<scene> <!-- DriveThru -->
+		<dialog>
+			You feel like heading for a good 'ole fashioned drive-thru. You make your way to one of the local fast food restraurants near your home and get in the drive-thru line. It's a decently short line, but enough vehicles that you will need wait for a little bit. You sit in your car slowly inching forwards in the line. Eventually, you arrive at the speaker to place your order.
+
+				"Good morning, order when you're ready." The voice from the speaker calls out.
+
+				"I will, thank you." You respond.
+
+			After giving your order some thought, you tell the person on the other end of the speaker what you'd like.
+		</dialog>
+		<options> Continue. {B2 DriveOrder1} [DriveOrder2] </options>
+	</scene>
+	<scene> <!-- DriveOrder1 -->
+		<dialog>
+			With your order taken, you resume your slow trek through the drive-thru line. After another moderate wait, you arrive at the pay window.
+
+				"That will be seven dollars and fifty cents." The lady at the window relays to you.
+
+				"Alright," you respond as you reach for your wallet. You find it rather quickly in the place you remember putting it. Luckily, you remembered to grab it before leaving the house.
+
+			You pull out the required amount and hand it to the woman.
+
+				"Thank you! Next window please," she says with a smile.
+
+			You follow your instruction and continue your journey through the line.
+		</dialog>
+		<options> Continue. [HappyBiscuit] </options>
+	</scene>
+	<scene> <!-- HappyBiscuit -->
+		<dialog>
+			Finally arriving at the pick-up window. The employee there is waiting happily with a smile on his face to hand you your food.
+
+				"Need anything else?" he asks cheerfully.
+
+				"No thank you, I'm fine," you respond.
+
+				"Alrighty then, hope you have great rest of your morning!" he exclaims while giving you your food.
+
+			What a pleasant drive-thru experience. You pull out of the line and head back towards to your house. When you arrive, you take your food and eagerly head inside to find somewhere to eat.
+
+			Sitting down, you open up the bag and look in. A bright glowing light permeates from within. You reach into the glorious container and withdraw a delicious looking biscuit from its depths. The biscuit is magnificent, holding all of the wonderfull biscuity qualities you would associate with a magnificent biscuit.
+
+			You did not only come this far to admire this creation though, raising the biscuit to your mouth, you take a bite...
+		</dialog>
+		<options> The end. [GoodEND] </options>
+	</scene>
+	<scene> <!-- DriveOrder2 -->
+		<dialog>
+			With your order taken, you resume your slow trek through the drive-thru line. After another moderate wait, you arrive at the pay window.
+
+				"That will be seven dollars and fifty cents." The lady at the window relays to you.
+
+				"Alright." You respond as you reach for your wallet. "Uh, one moment please," you nervously tell the woman as you continue feeling for your wallet... oh no. You've forgotten it at home.
+
+				"If you don't mind the line needs to get moving along," she says slightly annoyed.
+
+			You frantically begin scouring your vehicle for any loose money. You look behind the seats, under the seats, you check in the console, you scavenge the glovebox, you even crawl around in your floorboard for a few minutes until finally feeling as if you have exhausted all possible locations any money have been misplaced.
+
+			You get yourself situated in your chair and realize you've accumulated... 3 dollars.
+
+				You clear your throat, "Uhh... how about you just drop the sides and the drink and I'll just take the biscuit," you propose.
+
+			The woman silently glares at you for a solid 15 seconds before slowly extending her arm. Feeling a little unnerved by the woman's piercing gaze, you cautiously place your money into her hand.
+
+				"Next window please." She states flatly before closing the window.
+
+			Not wanting to risk her possibly returning to find you continuing to clog up the line, you decide to accept her advice and move forward in the line.
+		</dialog>
+		<optons> Continue. [SadBiscuit] </optons>
+	</scene>
+	<scene> <!-- SadBiscuit -->
+		<dialog>
+			Finally arriving at the pick-up window, the employee is already waiting there with your biscuit as a result of how long the line was waiting for you to get here. They hand you the biscuit in an irritated manner without saying a word. You grab the biscuit and they immediately let it go and close their window back, all without ever saying a word.
+
+			You'd think you just accidentally murdered the franchise mascot or something with how they're acting. I mean, they didn't even give you a bag. Just handed you a solitary wrapped breakfast biscuit.
+
+			You pull out of the line and drive back home. You exit your vehicle and enter your house where you go find a place to sit and eat. You unwrap your cold, slightly smushed (wonder who did that...) biscuit. It is in a sad state of affair. You didn't come this far to not eat it though. You raise the sad biscuit to your mouth and take a bite.
+		</dialog>
+		<options> The end. [BadEND] </options>
 	</scene>
 	<scene> <!-- DineIn -->
 		<dialog>
@@ -77,19 +171,19 @@
 		<dialog>
 			You spring from your seat and begin your pursuit! You quickly make it out of the establishment and begin looking for which way the perpetrator went.
 		</dialog>
-		<options> Follow after him! {D3 CorrectPursuit} [IncorrectPursuit] </options>
+		<options> Follow after him! {D3 CorrectPursuit1} [IncorrectPursuit] </options>
 	</scene>
-	<scene> <!-- CorrectPursuit -->
+	<scene> <!-- CorrectPursuit1 -->
 		<dialog>
 			Using your pristine detection skills, you catch a glimpse of the man's cape at it disappears down an alley way. You immediately adjust your path and head directly for his last seen location. Reaching the entrance of the alley you see the man standing at the end of it. He has nowhere to go.
 
 			How will you attempt to retrieve your food?
 		</dialog>
-		<options> Try to convince him. {C3 ConvinceBat} [ConvinceBatF] </options>
-		<options> Take it by force. {E3 FightBat} [FightBatF] </options>
-		<options> CHARGE!!! {A4 BlitzBat} [BlitzBatF] </options>
+		<options> Try to convince him. {C3 ConvinceBat1} [ConvinceBat2] </options>
+		<options> Take it by force. {E3 FightBat1} [FightBat2] </options>
+		<options> CHARGE!!! {A4 BlitzBat1} [BlitzBat2] </options>
 	</scene>
-	<scene> <!-- IncorrectPursuit -->
+	<scene> <!-- IncorrectPursuit1 -->
 		<dialog>
 			Due your not so pristine detection skills, you follow what you believed to be a glimpse of the man's cape down an alleyway. Once you arrive however, you sadly realize that you just chased a black trash bag down an alleyway...
 
@@ -113,7 +207,7 @@
 		</dialog>
 		<options> The end. [BadEND] </options>
 	</scene>
-	<scene> <!-- ConvinceBat -->
+	<scene> <!-- ConvinceBat1 -->
 		<dialog>
 			You choose to try and convince this Rather Dim Knight to return your food to you peacefully.
 
@@ -131,7 +225,7 @@
 		</dialog>
 		<options> The end. [GoodEND] </options>
 	</scene>
-	<scene> <!-- ConvinceBatF -->
+	<scene> <!-- ConvinceBat2 -->
 		<dialog>
 			You choose to try and convince this Rather Dim Knight to return your food to you peacefully.
 
@@ -147,7 +241,7 @@
 			You awaken face first on the cold pavement with pain all over your body. The food and the masked vigilante who had taken it are nowhere in sight. You slowly sit up, defeated. Contemplating how you ended up in this tragic scenario as your stomach rumbles one more time...
 
 			THE END
-	<scene> <!-- FightBat -->
+	<scene> <!-- FightBat1 -->
 		<dialog>
 			You put up your fist and prepare for a fight. The food theif does the same. You slowly approach one another, analyzing every movement. The two of you stop getting closer and begin a slow circling movement as you study each other's intentions. It feels like ages, but in the matter of seconds, the fight commences with just one step towards your foe.
 
@@ -157,7 +251,7 @@
 		</dialog>
 		<options> The end. [GoodEND] </options>
 	</scene>
-	<scene> <!-- FightBatF -->
+	<scene> <!-- FightBat2 -->
 		You put up your fist and prepare for a fight. The food theif does the same. You slowly approach one another, analyzing every movement. The two of you stop getting closer and begin a slow circling movement as you study each other's intentions. It feels like ages, but in the matter of seconds, the fight commences with just one step towards your foe.
 
 		You are quite clearly outmatched. As soon as the fight begins, your opponent out maneuvers any attempted offensive strikes you attempt while expertly navigating around your feebile defensive attempts to land blow after blow. This rather embarrasing beatdown of epic magnitude does not last long however, as he grows tired of using your squishy body as a pinata. He draws back his hand as far as needed, and comes forth with a devestating blast directly to your chin. You are knocked out on impact.
@@ -166,7 +260,7 @@
 
 		THE END
 	</scene>
-	<scene> <!-- BlitzBat -->
+	<scene> <!-- BlitzBat1 -->
 		<dialog>
 			Without taking even a moment to allow either of you to think, you take off in full speed towards the man.
 
@@ -176,7 +270,7 @@
 		</dialog>
 		<options> The end. [GoodEND] </options>
 	</scene>
-	<scene> <!-- BlitzBatF -->
+	<scene> <!-- BlitzBat2 -->
 		<dialog>
 			Without taking even a moment to allow either of you to think, you take off in full speed towards the man.
 
