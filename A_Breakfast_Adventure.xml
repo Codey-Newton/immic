@@ -12,7 +12,117 @@
 			Where have you actually woken up at.
 		</dialog>
 		<options> In your bed [InBed] </options>
-<!--		<options> In a tree [InTree] </options> -->
+		<options> In a tree {A 2 InTree1} [InTree2] </options>
+	</scene>
+	<scene> <!-- InTree1 -->
+		<dialog>
+			You are... in a tree? You do your best to remember what happened last night, but you simply cannot. You seem to be in the tree that resides right outside of your bedroom window. Looking at your surroundings, you attempt to discern the easiest way down.
+
+			You carefully find different footholds and make your way down the tree until you rest safely on the ground below.
+
+			Well that was rather easy. Now, where to next?
+		</dialog>
+		<options> Head inside to the kitchen. [MakeFood] </options>
+		<options> Go inside to get your keys. [GetFood] </options>
+		<options> Walk down the street. [FoodTruck] </options>
+	<scene> <!-- InTree2 -->
+		<dialog>
+			You are... in a tree? You do your best to remember what happened last night, but you simply cannot. You seem to be in the tree that resides right outside of your bedroom window. Looking at your surroundings, you attempt to discern the easiest way down.
+
+			Unfortunately, your less than superb agility capabilities fail you drastically. As you are looking around, you lose your balance and unceremoniously fall out of the tree like a bag of bricks.
+		</dialog>
+		<options> Are you okay? {E 3 YesIAm} [NoImNot] </options>
+	</scene>
+	<scene> <!-- NoImNot -->
+		<dialog>
+			No. No you are not. As soon as impact was made, your lack of endurance was immediately made known by a chorus of cracks, pops, and snaps.
+
+			Your body now resembles that of... what do they say, oh yes. A pretzel. You are dead.
+
+			Well that was rather quick and embarrassing. Let's just pretend this didn't happen, yeah? Yeah.
+		</dialog>
+		<options> Restart [Start] </options>
+	</scene>
+	<scene> <!-- YesIAm -->
+		<dialog>
+			Yes, actually. Your strong endurance has protected you through this possibly catastrophic but always embarrassing scenario. Congrats I guess? Anyway, now where?
+		</dialog>
+		<options> Head inside to the kitchen. [MakeFood] </options>
+		<options> Go inside to get your keys. [GetFood] </options>
+		<options> Walk down the street. [FoodTruck] </options>
+	</scene>
+	<scene> <!-- FoodTruck -->
+		<dialog>
+			Feeling a little spontaneous, you choose to start walking down the street of your neighborhood. You continue down the sidewalk for quite some time. You're taking in the scenery of this beautiful morning when you do notice some strange movement in the clouds... oh well, what's the worst it could be.
+
+			Where are you walking to?
+		</dialog>
+		<options> To your favorite cafe. [WalkToCafe1] </options>
+		<options> Just keep walking. [ContTruck] </options>
+	</scene>
+	<scene> <!-- ContTruck -->
+		<dialog>
+			Deciding you don't have much else to do, you just keep walking. The clouds remain to keep moving in ever-increasingly strange ways. No matter though, that doesn't concern you.
+
+			Just a few minutes later, you spot a food truck in the distance! You are still hungry, so might as well see what they have to offer. You approach the truck, which seems rather familiar to you for some reason that evades your memory. Regardless, the owner seems a little nervous as you arrive.
+
+				"Uh, why are you here!" he stammers.
+
+				You look at him with a confused expression, "To get food?" you say. "Is there something else I should know about?" you ask him.
+
+				"N-No! N-nothing to worry about!" he looks around sporadically. He visibly begins to sweat. For whatever reason, this dude is freaking out.
+
+				"Okay, well I'm just gonna-" you're interrupted.
+
+				"Wait, no! Stop! Just wait right there!" he blurts out as he reaches under his counter and presses something.
+
+			Suddenly, those strange moving clouds seem to stop moving so randomly. One of them shoots across the sky directly above you and stops. You look back into the food truck and the owner is nowhere to be seen. Before you have time to react a beam of light envelopes your body and you feel like you begin to float, then everything goes black.
+		</dialog>
+		<options> Continue. [Abduction] </options>
+	</scene>
+	<scene> <!-- Abduction -->
+		<dialog>
+			You slowly open your eyes to a bright light and a white room. You are strapped to a table and the room seems empty. You look around for a while at the foreign architecture before you realize that you've never seen anything like this place before. It doesn't take long before some creatures unlike anything you've ever seen enter the room. They are humanoid with blue tinted skin, their features are somewhat human, but have larger eyes, smaller noses, and their hair is replaced with what can only be described as tendrils.
+
+				"Hello, human," one of them greets you. "We apologize for the inconvienence of this whole situation," she says.
+
+				"Where am I? Why am I here?" you ask them.
+
+				"Well, you are on our ship. We are what you would call an alien species, and we are studying humans. You are here because one of our newer recruits to our expedition team... let's say, completely freaked out and called us to him," she explains.
+
+				"Sorry about that," another says embarrassed. "I was the person in the food truck. You started asking questions and I panicked," he tells you.
+
+				"Why?" you ask in response.
+
+				"Well," the woman speaks up again. "We may have recently performed this maneuver on you before. As in last night. Uh... sorry about the tree. Our systems targeting system was slightly off," she says with a laugh... Well that makes a lot more sense now. "Anyway," she continues, "We feel bad about this whole ordeal, so we would like to offer you something as compensation before returning you to your home, and hopefully actually inside of it this time," she remarks.
+		</dialog>
+		<options> Continue. [AlienBreakfast] </options>
+	</scene>
+	<scene> <!-- AlienBreakfast -->
+		<dialog>
+			The alien woman retrieves a type of bag from her person and gives it to you. You take the bag and the woman pokes you on the forehead with a single finer. You slowly drift to sleep.
+
+			Awaking on top of your refrigerator, you immediately fall off into your kitchen floor. So much for their advanced "targeting system" you think to yourself. You notice that the bag is still with you, so you decide to open it up on your kitchen table.
+
+			Opening it up, you view some strange looking items with a note attached. Withdrawing the note, you read:
+			"Here is some food from our home planet. We have done the research to determine it is quite harmless to you humans. Enjoy!"
+
+			Well that's neat. You withdraw one of the pieces of food. You observe it carefully and give it a good sniff. It smells wonderful. Not wanting to waste their gift, you decide to take a bite and wait no longer...
+		</dialog>
+		<options> The end. [AlienEND] </options>
+	</scene>
+	<scene> <!-- AlienEND -->
+		<dialog>
+			Congragulations! You successfully took on the world, or in the case, the "otherwordly" *wink wink*, and achieved your admirable goal of devouring a delicious breakfast. There are many other ways for you to aquire a different breakfast too though, but maybe none as extraterrestrial as this one. Regardless, another time, perhaps. Another time.
+
+			THE END
+	<scene> <!-- WalkToCafe -->
+		<dialog>
+			You feel in the mood to go and sit down at a nice cafe and have a calm relaxing morning. You continue your walk until the cafe comes into sight. You make your way into the establishment and wait your turn in line. Once it comes around to you, the person behind the counter finally addresses you.
+
+			"Hi, how may I serve you this morning?" the friendly employee asks with a smile.
+		</dialog>
+		<options> Order something. [CafeOrder] </options>
 	</scene>
 	<scene> <!-- InBed -->
 		<dialog>
@@ -20,8 +130,8 @@
 
 			 How do you choose to go downstairs?
 		</dialog>
-		<options> Use bedroom door {D1 BedDoor1} [BedDoor2] </options>
-		<options> Use bedroom window. {A4 BedWindow1} [BedWindow2] </options>
+		<options> Use bedroom door {D 1 BedDoor1} [BedDoor2] </options>
+		<options> Use bedroom window. {A 4 BedWindow1} [BedWindow2] </options>
 	</scene>
 	<scene> <!-- BedWindow1 -->
 		<dialog>
@@ -77,7 +187,7 @@
 
 			After giving your order some thought, you tell the person on the other end of the speaker what you'd like.
 		</dialog>
-		<options> Continue. {B2 DriveOrder1} [DriveOrder2] </options>
+		<options> Continue. {B 2 DriveOrder1} [DriveOrder2] </options>
 	</scene>
 	<scene> <!-- DriveOrder1 -->
 		<dialog>
@@ -171,7 +281,7 @@
 		<dialog>
 			You spring from your seat and begin your pursuit! You quickly make it out of the establishment and begin looking for which way the perpetrator went.
 		</dialog>
-		<options> Follow after him! {D3 CorrectPursuit1} [IncorrectPursuit] </options>
+		<options> Follow after him! {D 3 CorrectPursuit1} [IncorrectPursuit2] </options>
 	</scene>
 	<scene> <!-- CorrectPursuit1 -->
 		<dialog>
@@ -179,11 +289,11 @@
 
 			How will you attempt to retrieve your food?
 		</dialog>
-		<options> Try to convince him. {C3 ConvinceBat1} [ConvinceBat2] </options>
-		<options> Take it by force. {E3 FightBat1} [FightBat2] </options>
-		<options> CHARGE!!! {A4 BlitzBat1} [BlitzBat2] </options>
+		<options> Try to convince him. {C 3 ConvinceBat1} [ConvinceBat2] </options>
+		<options> Take it by force. {E 3 FightBat1} [FightBat2] </options>
+		<options> CHARGE!!! {A 4 BlitzBat1} [BlitzBat2] </options>
 	</scene>
-	<scene> <!-- IncorrectPursuit1 -->
+	<scene> <!-- IncorrectPursuit2 -->
 		<dialog>
 			Due your not so pristine detection skills, you follow what you believed to be a glimpse of the man's cape down an alleyway. Once you arrive however, you sadly realize that you just chased a black trash bag down an alleyway...
 
@@ -317,9 +427,9 @@
 
 			What will you make?
 		</dialog>
-		<options> Cereal {B2 MakeCereal1} [CerealCheck] </options>
-		<options> Toast and bacon {D3 ToastAndBacon1} [ToastAndBacon2] </options>
-		<options> Pancakes {B2 MakePancakes1} [PancakeCheck] </options>
+		<options> Cereal {B 2 MakeCereal1} [CerealCheck] </options>
+		<options> Toast and bacon {D 3 ToastAndBacon1} [ToastAndBacon2] </options>
+		<options> Pancakes {B 2 MakePancakes1} [PancakeCheck] </options>
 		<options> The toaster pastries [ToasterPastries] </options>
 	</scene>
 	<scene> <!-- ToasterPastries -->
@@ -341,7 +451,7 @@
 		<dialog>
 			You failed a Brain check.
 		</dialog>
-		<options> Continue... {E3 MakePancakesBad} [PancakeDeath] </options>
+		<options> Continue... {E 3 MakePancakesBad} [PancakeDeath] </options>
 	</scene>
 	<scene> <!-- MakePancakesBad -->
 		<dialog>
@@ -379,7 +489,7 @@
 		<dialog>
 			You have failed a Brain check.
 		</dialog>
-		<options> Continue... {E2 MakeCerealBad} [MakeCerealDeath] </options>
+		<options> Continue... {E 2 MakeCerealBad} [MakeCerealDeath] </options>
 	</scene>
 	<scene> <!-- MakeCerealBad -->
 		<dialog>
