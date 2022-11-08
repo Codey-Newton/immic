@@ -6,6 +6,8 @@
 
 <adventure>
 	<scene> <!-- 0 -->
+		<title>./images/toastPng.png</title>
+		<save> A Breakfast Adventure </save>
 		<dialog>
 			You awaken with a grumble of your stomach. You realize that you are quite hungry and decide that you want to get some breakfast this morning. But wait.
 
@@ -514,6 +516,7 @@
 
 			THE END
 		</dialog>
+		<color_dialog> 35 </color_dialog>
 	</scene>
 	<scene> <!-- 50 -->
 		<dialog>
@@ -521,5 +524,6 @@
 
 			THE END
 		</dialog>
+		<color_dialog> 161 </color_dialog>
 	</scene>
 </adventure>
