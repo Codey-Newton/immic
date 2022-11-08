@@ -1,8 +1,7 @@
 import curses
-dialog  = 0
-options = 0
-boarder = 0
-picture = 0
+import ascii_magic
+
+# print available terminal colors
 def terminal_colors():
     def main(stdscr):
         curses.start_color()
@@ -26,15 +25,31 @@ def terminal_colors():
         exit(0) 
     curses.wrapper(main)
     
-# gives the game color
+# returns a color list holding all available colors
+# in a scene.
 def scene_colors(story: dict, curr_scene: int):
+    dialog = 0
+    options = 0
+    boarder = 0
+    picColor = 0
+    color_list = [ ]
     if 'color_dialog' in story['adventure']['scene'][curr_scene]:
-        color_list[0] = int(story['adventure']['scene'][curr_scene]['color_dialog'])
-    elif 'color_options' in story['adventure']['scene'][curr_scene]:
-        color_list[1] = int(story['adventure']['scene'][curr_scene]['color_options'])
-    elif 'color_boarder' in story['adventure']['scene'][curr_scene]:
-        color_list[2] = int(story['adventure']['scene'][curr_scene]['color_boarder'])
-    elif 'color_boarder' in story['adventure']['scene'][curr_scene]:
-        color_list[3] = int(story['adventure']['scene'][curr_scene]['color_boarder'])    
-    else:
-        return
+        print("you have dialog color: ", int(story['adventure']['scene'][curr_scene]['color_dialog']))
+        dialog = int(story['adventure']['scene'][curr_scene]['color_dialog'])
+    if 'color_options' in story['adventure']['scene'][curr_scene]:
+        options = int(story['adventure']['scene'][curr_scene]['color_options'])
+    if 'color_boarder' in story['adventure']['scene'][curr_scene]:
+        boarder = int(story['adventure']['scene'][curr_scene]['color_boarder'])
+    if 'picColor' in story['adventure']['scene'][curr_scene]:
+        picColor = int(story['adventure']['scene'][curr_scene]['picColor'])    
+    
+    color_list = [dialog, options, boarder, picColor]
+    print(color_list[0])
+    return color_list
+
+ # takes a image and converts it to ascii art 80 characters wide       
+def a_picture(picture: str):
+    ascii_magic.Modes.ASCII
+    tmp_pic = ascii_magic.from_image_file(
+        picture, mode = ascii_magic.Modes.ASCII , columns=80)
+    return tmp_pic
