@@ -126,6 +126,7 @@ Congragulations! You successfully took on the world, or in the case, the "otherw
 THE END
 		</dialog>
 		<options></options>
+		<color> 35 </color>
 	</scene>
 	<scene> <!-- 10 -->
 		<dialog>
