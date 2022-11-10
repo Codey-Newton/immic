@@ -1,4 +1,5 @@
 import sys,os
+from pathlib import Path
 import curses
 import xmltodict
 import re
@@ -10,9 +11,11 @@ import pickle
 #--------------------------------------------------------
 # global variables
 #--------------------------------------------------------
-save_name = "immic"
-Picture = ""
 title_pic = ""
+save_name = "immic"
+title_pic_color = 0
+menu_color = 80
+Picture = ""
 Line= "HELOOOO"
 Options = []
 Input = 999
@@ -41,7 +44,11 @@ def title_screen(stdscr):
         h, w = stdscr.getmaxyx()
 
         # set the attibute.
-        curses.init_pair(1, curses.COLOR_CYAN, curses.COLOR_BLACK)
+         # initiate colors
+        curses.start_color()
+        curses.use_default_colors()
+        for i in range(0, curses.COLORS):
+            curses.init_pair(i + 1, i, -1)
         title_win = curses.newwin(20 , 81, h//2 - 21, w//2 - 35)
 
         title = colors.a_picture(Picture)
@@ -51,7 +58,7 @@ def title_screen(stdscr):
 
             title_win.clear()
 
-            title_win.addstr(title, curses.color_pair(color_listG[3]))
+            title_win.addstr(title, curses.color_pair(title_pic_color))
 
             title_win.refresh()
             # get y based on # of items in array and x based on
@@ -60,9 +67,9 @@ def title_screen(stdscr):
                 x = w//2 - len(row)//2
                 y = h//2 - len(menu)//2 + i
                 if i == current_row:
-                    stdscr.attron(curses.color_pair(1))
+                    stdscr.attron(curses.color_pair(menu_color))
                     stdscr.addstr(y, x, row)
-                    stdscr.attroff(curses.color_pair(1))
+                    stdscr.attroff(curses.color_pair(menu_color))
                 else:
                     stdscr.addstr(y, x, row)
             #gets key from user
@@ -77,6 +84,7 @@ def title_screen(stdscr):
                     break
                 elif current_row == len(menu)-2:
                     Player = load_story(Player)
+                    curses.wrapper(main)
                     break
                 elif current_row == len(menu)-1:
                     exit()
@@ -90,7 +98,7 @@ def title_screen(stdscr):
 def print_pause_menu(stdscr):
     global Player
     #array with
-    menu = ['Resume', 'Save', 'Load', 'Home', 'Exit']
+    menu = ['Resume', 'Save', 'Exit']
 
     #clear and refresh screen
     stdscr.clear()
@@ -102,7 +110,11 @@ def print_pause_menu(stdscr):
     current_row = 0
 
     # set the attibute.
-    curses.init_pair(1, curses.COLOR_CYAN, curses.COLOR_BLACK)
+    # initiate colors
+    curses.start_color()
+    curses.use_default_colors()
+    for i in range(0, curses.COLORS):
+        curses.init_pair(i + 1, i, -1)
 
     while 1:
 
@@ -114,9 +126,9 @@ def print_pause_menu(stdscr):
             x = w//2 - len(row)//2
             y = h//2 - len(menu)//2 + i
             if i == current_row:
-                stdscr.attron(curses.color_pair(1))
+                stdscr.attron(curses.color_pair(menu_color))
                 stdscr.addstr(y, x, row)
-                stdscr.attroff(curses.color_pair(1))
+                stdscr.attroff(curses.color_pair(menu_color))
             else:
                 stdscr.addstr(y, x, row)
         #gets key from user
@@ -126,18 +138,13 @@ def print_pause_menu(stdscr):
         elif k == curses.KEY_DOWN and current_row < len(menu) - 1:
             current_row += 1
         elif k == k in [10, 13]:
-            if current_row == len(menu)-5:
+            if current_row == len(menu)-3:
                 curses.wrapper(divide_screen)
                 break
-            elif current_row == len(menu)-4:
+            elif current_row == len(menu)-2:
                 save_story(Player)
+                curses.wrapper(divide_screen)
                 break
-            elif current_row == len(menu)-3:
-                Player = load_story(Player)
-                break
-            #elif current_row == len(menu)-2:
-                #curses.wrapper(start_menu)
-                #break
             elif current_row == len(menu)-1:
                 exit()
             stdscr.clear()
@@ -154,8 +161,8 @@ def divide_screen(stdscr):
     end = 0
     h, w = stdscr.getmaxyx()
 
-    character_win = curses.newwin(h, w//4, 0, 0)
-    story_win = curses.newwin(h//2-1, w//4+27, 0, w//4+3)
+    character_win = curses.newwin(h, w//4, 30, 0)
+    story_win = curses.newwin(h//2-1, w//2+55, 0, w//4+3)
     choices_win = curses.newwin(h//2-1, w//2+27, h//2+1, w//4+3)
     border_win = curses.newwin(h, 3, 0, w//4)
     border2_win = curses.newwin(3, w//2+27, h//2-1, w//4+2)
@@ -314,13 +321,23 @@ def divide_screen(stdscr):
   Line = dialog'''
   
 def save_story(Player:ch.Character):
-    with open('Player.pickle', 'wb') as f:
+    path = Path(f"./saves_immic/{save_name}")
+    if path.is_file():
+        os.remove(f"./saves_immic/{save_name}")
+        
+    with open(f"./saves_immic/{save_name}", 'wb') as f:
         pickle.dump(Player, f)
 
 def load_story(Player:ch.Character):
-    with open('Player.pickle', 'rb') as f:
-        Player = pickle.load(f)
-    return Player
+    try:
+        with open(f"./saves_immic/{save_name}", 'rb') as f:
+            Player = pickle.load(f)
+
+    except FileNotFoundError:
+        exit("save file not found!!!")
+        
+    else:
+        return Player
     
 # checks to see if your input is in the valid_inputs list
 def get_input(valid_input: list):
@@ -399,32 +416,34 @@ def get_response(story: dict, curr_scene: int):
 
 def story_flow(story: dict):
 
-  curr_scene = 0
+    global color_listG, Line
 
-  global color_listG, Line
-  
-  while curr_scene != None:
-    
-    color_listG = colors.scene_colors(story, curr_scene)
-    print(color_listG)
+    curr_scene = Player.scene
 
-    if story['adventure']['scene'][curr_scene] == None:
-      curr_scene = None
-      return 1
+    while curr_scene != None:
 
-    Line = story['adventure']['scene'][curr_scene]['dialog']
+      Player.scene = curr_scene
 
-    # if a option contains nothing, or returns None, break form the loop.
-    if story['adventure']['scene'][curr_scene]['options'] == None:
-      global Options
-      Options.clear()
+      color_listG = colors.scene_colors(story, curr_scene)
+      print(color_listG)
+
+      if story['adventure']['scene'][curr_scene] == None:
+        curr_scene = None
+        return 1
+
       Line = story['adventure']['scene'][curr_scene]['dialog']
-      Options.append("End Of The Story, To exit press 0")
-      curr_scene = None
-      curses.wrapper(divide_screen)
-      return 1
 
-    curr_scene = get_response(story, curr_scene)
+      # if a option contains nothing, or returns None, break form the loop.
+      if story['adventure']['scene'][curr_scene]['options'] == None:
+        global Options
+        Options.clear()
+        Line = story['adventure']['scene'][curr_scene]['dialog']
+        Options.append("End Of The Story, To exit press 0")
+        curr_scene = None
+        curses.wrapper(divide_screen)
+        return 1
+
+      curr_scene = get_response(story, curr_scene)
 
 ################################################################################
 
@@ -469,10 +488,11 @@ if __name__ == "__main__":
     # the XML document
     story = xmltodict.parse(my_xml, namespace_separator=True)
 
-    # run story_file checks checks
+    # run story_file checks 
     list_ps = story_scheme.check(story, Picture, save_name)
     Picture = list_ps[0]
     save_name = list_ps[1]
-    Player.name = "john"
+    title_pic_color = int(list_ps[2])
+    menu_color = int(list_ps[3])
     curses.wrapper(title_screen)
     
