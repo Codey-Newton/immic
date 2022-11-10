@@ -2,52 +2,58 @@
 <!-- Brain -->
 <!-- Charm -->
 <!-- Detect -->
-<!-- Endure -->
+<!-- enure -->
 
 <adventure>
-	<scene> <!-- 0 -->
-		<title>./images/toastPng.png</title>
-		<save> A Breakfast Adventure </save>
-		<dialog>
-			You awaken with a grumble of your stomach. You realize that you are quite hungry and decide that you want to get some breakfast this morning. But wait.
 
-			Where have you actually woken up at.
+	<scene> <!-- 0 -->
+		<title>
+		<title_pic_dir>./images/toastPng1.png</title_pic_dir>
+		<save_name>A_Breakfest_adventure</save_name>
+		<title_pic_color>215</title_pic_color>
+		<menu_color>10</menu_color>
+		</title>
+		<dialog>
+You awaken with a grumble of your stomach. You realize that you are quite hungry and decide that you want to get some breakfast this morning. But wait.
+
+Where have you actually woken up at.
 		</dialog>
 		<options> In your bed [11] </options>
 		<options> In a tree {A 2 1} [2] </options>
 	</scene>
 	<scene> <!-- 1 -->
 		<dialog>
-			You are... in a tree? You do your best to remember what happened last night, but you simply cannot. You seem to be in the tree that resides right outside of your bedroom window. Looking at your surroundings, you attempt to discern the easiest way down.
+You are... in a tree? You do your best to remember what happened last night, but you simply cannot. You seem to be in the tree that resides right outside of your bedroom window. Looking at your surroundings, you attempt to discern the easiest way down.
 
-			You carefully find different footholds and make your way down the tree until you rest safely on the ground below.
+You carefully find different footholds and make your way down the tree until you rest safely on the ground below.
 
-			Well that was rather easy. Now, where to next?
+Well that was rather easy. Now, where to next?
 		</dialog>
 		<options> Head inside to the kitchen. [37] </options>
 		<options> Go inside to get your keys. [16] </options>
 		<options> Walk down the street. [5] </options>
+	</scene>
 	<scene> <!-- 2 -->
 		<dialog>
-			You are... in a tree? You do your best to remember what happened last night, but you simply cannot. You seem to be in the tree that resides right outside of your bedroom window. Looking at your surroundings, you attempt to discern the easiest way down.
+You are... in a tree? You do your best to remember what happened last night, but you simply cannot. You seem to be in the tree that resides right outside of your bedroom window. Looking at your surroundings, you attempt to discern the easiest way down.
 
-			Unfortunately, your less than superb agility capabilities fail you drastically. As you are looking around, you lose your balance and unceremoniously fall out of the tree like a bag of bricks.
+Unfortunately, your less than superb agility capabilities fail you drastically. As you are looking around, you lose your balance and unceremoniously fall out of the tree like a bag of bricks.
 		</dialog>
 		<options> Are you okay? {E 3 4} [3] </options>
 	</scene>
 	<scene> <!-- 3 -->
 		<dialog>
-			No. No you are not. As soon as impact was made, your lack of endurance was immediately made known by a chorus of cracks, pops, and snaps.
+No. No you are not. As soon as impact was made, your lack of endurance was immediately made known by a chorus of cracks, pops, and snaps.
 
-			Your body now resembles that of... what do they say, oh yes. A pretzel. You are dead.
+Your body now resembles that of... what do they say, oh yes. A pretzel. You are dead.
 
-			Well that was rather quick and embarrassing. Let's just pretend this didn't happen, yeah? Yeah.
+Well that was rather quick and embarrassing. Let's just pretend this didn't happen, yeah? Yeah.
 		</dialog>
 		<options> Retry [0] </options>
 	</scene>
 	<scene> <!-- 4 -->
 		<dialog>
-			Yes, actually. Your strong endurance has protected you through this possibly catastrophic but always embarrassing scenario. Congrats I guess? Anyway, now where?
+Yes, actually. Your strong endurance has protected you through this possibly catastrophic but always embarrassing scenario. Congrats I guess? Anyway, now where?
 		</dialog>
 		<options> Head inside to the kitchen. [37] </options>
 		<options> Go inside to get your keys. [16] </options>
@@ -55,225 +61,230 @@
 	</scene>
 	<scene> <!-- 5 -->
 		<dialog>
-			Feeling a little spontaneous, you choose to 0 walking down the street of your neighborhood. You continue down the sidewalk for quite some time. You're taking in the scenery of this beautiful morning when you do notice some strange movement in the clouds... oh well, what's the worst it could be.
+Feeling a little spontaneous, you choose to 0 walking down the street of your neighborhood. You continue down the sidewalk for quite some time. You're taking in the scenery of this beautiful morning when you do notice some strange movement in the clouds... oh well, what's the worst it could be.
 
-			Where are you walking to?
+Where are you walking to?
 		</dialog>
 		<options> To your favorite cafe. [10] </options>
 		<options> Just keep walking. [6] </options>
 	</scene>
 	<scene> <!-- 6 -->
 		<dialog>
-			Deciding you don't have much else to do, you just keep walking. The clouds remain to keep moving in ever-increasingly strange ways. No matter though, that doesn't concern you.
+Deciding you don't have much else to do, you just keep walking. The clouds remain to keep moving in ever-increasingly strange ways. No matter though, that doesn't concern you.
 
-			Just a few minutes later, you spot a food truck in the distance! You are still hungry, so might as well see what they have to offer. You approach the truck, which seems rather familiar to you for some reason that evades your memory. Regardless, the owner seems a little nervous as you arrive.
+Just a few minutes later, you spot a food truck in the distance! You are still hungry, so might as well see what they have to offer. You approach the truck, which seems rather familiar to you for some reason that evades your memory. Regardless, the owner seems a little nervous as you arrive.
 
-				"Uh, why are you here!" he stammers.
+	"Uh, why are you here!" he stammers.
 
-				You look at him with a confused expression, "To get food?" you say. "Is there something else I should know about?" you ask him.
+	You look at him with a confused expression, "To get food?" you say. "Is there something else I should know about?" you ask him.
 
-				"N-No! N-nothing to worry about!" he looks around sporadically. He visibly begins to sweat. For whatever reason, this dude is freaking out.
+	"N-No! N-nothing to worry about!" he looks around sporadically. He visibly begins to sweat. For whatever reason, this dude is freaking out.
 
-				"Okay, well I'm just gonna-" you're interrupted.
+	"Okay, well I'm just gonna-" you're interrupted.
 
-				"Wait, no! Stop! Just wait right there!" he blurts out as he reaches under his counter and presses something.
+	"Wait, no! Stop! Just wait right there!" he blurts out as he reaches under his counter and presses something.
 
-			Suddenly, those strange moving clouds seem to stop moving so randomly. One of them shoots across the sky directly above you and stops. You look back into the food truck and the owner is nowhere to be seen. Before you have time to react a beam of light envelopes your body and you feel like you begin to float, then everything goes black.
+Suddenly, those strange moving clouds seem to stop moving so randomly. One of them shoots across the sky directly above you and stops. You look back into the food truck and the owner is nowhere to be seen. Before you have time to react a beam of light envelopes your body and you feel like you begin to float, then everything goes black.
 		</dialog>
 		<options> Continue. [7] </options>
 	</scene>
 	<scene> <!-- 7 -->
 		<dialog>
-			You slowly open your eyes to a bright light and a white room. You are strapped to a table and the room seems empty. You look around for a while at the foreign architecture before you realize that you've never seen anything like this place before. It doesn't take long before some creatures unlike anything you've ever seen enter the room. They are humanoid with blue tinted skin, their features are somewhat human, but have larger eyes, smaller noses, and their hair is replaced with what can only be described as tendrils.
+You slowly open your eyes to a bright light and a white room. You are strapped to a table and the room seems empty. You look around for a while at the foreign architecture before you realize that you've never seen anything like this place before. It doesn't take long before some creatures unlike anything you've ever seen enter the room. They are humanoid with blue tinted skin, their features are somewhat human, but have larger eyes, smaller noses, and their hair is replaced with what can only be described as tendrils.
 
-				"Hello, human," one of them greets you. "We apologize for the inconvienence of this whole situation," she says.
+	"Hello, human," one of them greets you. "We apologize for the inconvienence of this whole situation," she says.
 
-				"Where am I? Why am I here?" you ask them.
+	"Where am I? Why am I here?" you ask them.
 
-				"Well, you are on our ship. We are what you would call an alien species, and we are studying humans. You are here because one of our newer recruits to our expedition team... let's say, completely freaked out and called us to him," she explains.
+	"Well, you are on our ship. We are what you would call an alien species, and we are studying humans. You are here because one of our newer recruits to our expedition team... let's say, completely freaked out and called us to him," she explains.
 
-				"Sorry about that," another says embarrassed. "I was the person in the food truck. You 0ed asking questions and I panicked," he tells you.
+	"Sorry about that," another says embarrassed. "I was the person in the food truck. You 0ed asking questions and I panicked," he tells you.
 
-				"Why?" you ask in response.
+	"Why?" you ask in response.
 
-				"Well," the woman speaks up again. "We may have recently performed this maneuver on you before. As in last night. Uh... sorry about the tree. Our systems targeting system was slightly off," she says with a laugh... Well that makes a lot more sense now. "Anyway," she continues, "We feel bad about this whole ordeal, so we would like to offer you something as compensation before returning you to your home, and hopefully actually inside of it this time," she remarks.
+	"Well," the woman speaks up again. "We may have recently performed this maneuver on you before. As in last night. Uh... sorry about the tree. Our systems targeting system was slightly off," she says with a laugh... Well that makes a lot more sense now. "Anyway," she continues, "We feel bad about this whole ordeal, so we would like to offer you something as compensation before returning you to your home, and hopefully actually inside of it this time," she remarks.
 		</dialog>
 		<options> Continue. [8] </options>
 	</scene>
 	<scene> <!-- 8 -->
 		<dialog>
-			The alien woman retrieves a type of bag from her person and gives it to you. You take the bag and the woman pokes you on the forehead with a single finer. You slowly drift to sleep.
+The alien woman retrieves a type of bag from her person and gives it to you. You take the bag and the woman pokes you on the forehead with a single finer. You slowly drift to sleep.
 
-			Awaking on top of your refrigerator, you immediately fall off into your kitchen floor. So much for their advanced "targeting system" you think to yourself. You notice that the bag is still with you, so you decide to open it up on your kitchen table.
+Awaking on top of your refrigerator, you immediately fall off into your kitchen floor. So much for their advanced "targeting system" you think to yourself. You notice that the bag is still with you, so you decide to open it up on your kitchen table.
 
-			Opening it up, you view some strange looking items with a note attached. Withdrawing the note, you read:
-			"Here is some food from our home planet. We have done the research to determine it is quite harmless to you humans. Enjoy!"
+Opening it up, you view some strange looking items with a note attached. Withdrawing the note, you read:
+"Here is some food from our home planet. We have done the research to determine it is quite harmless to you humans. Enjoy!"
 
-			Well that's neat. You withdraw one of the pieces of food. You observe it carefully and give it a good sniff. It smells wonderful. Not wanting to waste their gift, you decide to take a bite and wait no longer...
+Well that's neat. You withdraw one of the pieces of food. You observe it carefully and give it a good sniff. It smells wonderful. Not wanting to waste their gift, you decide to take a bite and wait no longer...
 		</dialog>
 		<options> The end. [9] </options>
 	</scene>
 	<scene> <!-- 9 -->
 		<dialog>
-			Congragulations! You successfully took on the world, or in the case, the "otherwordly" *wink wink*, and achieved your admirable goal of devouring a delicious breakfast. There are many other ways for you to aquire a different breakfast too though, but maybe none as extraterrestrial as this one. Regardless, another time, perhaps. Another time.
+Congragulations! You successfully took on the world, or in the case, the "otherwordly" *wink wink*, and achieved your admirable goal of devouring a delicious breakfast. There are many other ways for you to aquire a different breakfast too though, but maybe none as extraterrestrial as this one. Regardless, another time, perhaps. Another time.
 
-			THE END
+THE END
+		</dialog>
+		<options></options>
+	</scene>
 	<scene> <!-- 10 -->
 		<dialog>
-			You feel in the mood to go and sit down at a nice cafe and have a calm relaxing morning. You continue your walk until the cafe comes into sight. You make your way into the establishment and wait your turn in line. Once it comes around to you, the person behind the counter finally addresses you.
+You feel in the mood to go and sit down at a nice cafe and have a calm relaxing morning. You continue your walk until the cafe comes into sight. You make your way into the establishment and wait your turn in line. Once it comes around to you, the person behind the counter finally addresses you.
 
-			"Hi, how may I serve you this morning?" the friendly employee asks with a smile.
+"Hi, how may I serve you this morning?" the friendly employee asks with a smile.
 		</dialog>
 		<options> Order something. [23] </options>
 	</scene>
 	<scene> <!-- 11 -->
 		<dialog>
-			 Well, obviously, you're in your bed of course. Where else would you be? You groggily climb out from under your covers and sit up.Your bedroom door is located to your left beyond the foot of your bed. There is a window to your right overlooking the neighborhood you reside in from your2nd story vantage point. Feeling another growl from your stomach, you decide it's time to get up and get some food.
+Well, obviously, you're in your bed of course. Where else would you be? You groggily climb out from under your covers and sit up.Your bedroom door is located to your left beyond the foot of your bed. There is a window to your right overlooking the neighborhood you reside in from your2nd story vantage point. Feeling another growl from your stomach, you decide it's time to get up and get some food.
 
-			 How do you choose to go downstairs?
+How do you choose to go downstairs?
 		</dialog>
 		<options> Use bedroom door {D 1 14} [15] </options>
 		<options> Use bedroom window. {A 4 12} [13] </options>
 	</scene>
 	<scene> <!-- 12 -->
 		<dialog>
-			For some reason, you have decided to exit your bedroom using your window. Carefully raising it up, you step onto your roof. Slowly making your way to the edge, you jump off.
+For some reason, you have decided to exit your bedroom using your window. Carefully raising it up, you step onto your roof. Slowly making your way to the edge, you jump off.
 
-			Surprisingly, you manage to navigate your jump rather well. You land harmlessly on the ground with minimal inconvienence. Heading inside, you figure it's time to decide what you actually want to eat.
+Surprisingly, you manage to navigate your jump rather well. You land harmlessly on the ground with minimal inconvienence. Heading inside, you figure it's time to decide what you actually want to eat.
 		</dialog>
 		<options> Go to kitchen. [37] </options>
-		<optoins> Get your keys. [16] </optoins>
+		<options> Get your keys. [16] </options>
 	</scene>
 	<scene> <!-- 13 -->
 		<dialog>
-			For some reason, you have decided to exit your bedroom using your window. Carefully raising it up, you step onto your roof. Slowly making your way to the edge, you jump off.
+For some reason, you have decided to exit your bedroom using your window. Carefully raising it up, you step onto your roof. Slowly making your way to the edge, you jump off.
 
-			Unsurprisingly, you did not navigate your jump very well. You smack into a tree branch almost immediately which sends you into a backwards spiral in which you land directly on to your head. You are knocked unconscious and severely injured. I don't know why you tried doing that. Hopefully a passer-by notices you and calls an ambulance...
+Unsurprisingly, you did not navigate your jump very well. You smack into a tree branch almost immediately which sends you into a backwards spiral in which you land directly on to your head. You are knocked unconscious and severely injured. I don't know why you tried doing that. Hopefully a passer-by notices you and calls an ambulance...
 
-			THE END
+THE END
+		</dialog>
+		<options></options>
+	</scene>
 	<scene> <!-- 14 -->
 		<dialog>
-			You notice that the staircase has been recently polished and waxed. "Who would polish and wax my hardwood stairs?" you wonder to yourself. Anyway, you decide to take it slowly down them as to not injure yourself. Once you get to the bottom, you deem it time to decide what you actually want to eat.
+You notice that the staircase has been recently polished and waxed. "Who would polish and wax my hardwood stairs?" you wonder to yourself. Anyway, you decide to take it slowly down them as to not injure yourself. Once you get to the bottom, you deem it time to decide what you actually want to eat.
 		</dialog>
 		<options> Go to kitchen. [37] </options>
 		<options> Get your keys. [16] </options>
 	</scene>
 	<scene> <!-- 15 -->
 		<dialog>
-			Without even taking a mere second to even look at your surroundings, you decide to 0 your jog down the stairs. Unfortunately, you've failed to notice that someone had recently polished and waxed the stairs outside of your bedroom...
+Without even taking a mere second to even look at your surroundings, you decide to 0 your jog down the stairs. Unfortunately, you've failed to notice that someone had recently polished and waxed the stairs outside of your bedroom...
 
-			After making it successfully onto the first step, your foot slides rather quickly out from under your body and you begin your unceremonious tumble down the staircase. Your world becomes a blur of rotation household furniture as you approach your destination of the living room floor. Ouch.
+After making it successfully onto the first step, your foot slides rather quickly out from under your body and you begin your unceremonious tumble down the staircase. Your world becomes a blur of rotation household furniture as you approach your destination of the living room floor. Ouch.
 		</dialog>
 		<options> Go to kitchen. [37] </options>
 		<options> Get your keys. [16] </options>
 	</scene>
 	<scene> <!-- 16 -->
 		<dialog>
-			Deciding you aren't really in the mood to eat anything you may have lying around the house, you opt to hit the road in favor of picking something up somewhereelse. You grab your keys and head off.
+Deciding you aren't really in the mood to eat anything you may have lying around the house, you opt to hit the road in favor of picking something up somewhereelse. You grab your keys and head off.
 
-			So you head out the front door. Open the garage door. Then you open the car doors. And you get in those car doors. Put your key in the ignition. And then you turn it sideways. Then you fasten your seat belt. As you pull out the driveway.
+So you head out the front door. Open the garage door. Then you open the car doors. And you get in those car doors. Put your key in the ignition. And then you turn it sideways. Then you fasten your seat belt. As you pull out the driveway.
 
-			Now that you're on the road, what are you in the mood for?
-
+Now that you're on the road, what are you in the mood for?
 		</dialog>
 		<options> Dine-in cafe. [22] </options>
 		<options> Fast food drive-thru. [17] </options>
 	</scene>
 	<scene> <!-- 17 -->
 		<dialog>
-			You feel like heading for a good 'ole fashioned drive-thru. You make your way to one of the local fast food restraurants near your home and get in the drive-thru line. It's a decently short line, but enough vehicles that you will need wait for a little bit. You sit in your car slowly inching forwards in the line. Eventually, you arrive at the speaker to place your order.
+You feel like heading for a good 'ole fashioned drive-thru. You make your way to one of the local fast food restraurants near your home and get in the drive-thru line. It's a decently short line, but enough vehicles that you will need wait for a little bit. You sit in your car slowly inching forwards in the line. Eventually, you arrive at the speaker to place your order.
 
-				"Good morning, order when you're ready." The voice from the speaker calls out.
+	"Good morning, order when you're ready." The voice from the speaker calls out.
 
-				"I will, thank you." You respond.
+	"I will, thank you." You respond.
 
-			After giving your order some thought, you tell the person on the other end of the speaker what you'd like.
+After giving your order some thought, you tell the person on the other end of the speaker what you'd like.
 		</dialog>
 		<options> Continue. {B 2 18} [20] </options>
 	</scene>
 	<scene> <!-- 18 -->
 		<dialog>
-			With your order taken, you resume your slow trek through the drive-thru line. After another moderate wait, you arrive at the pay window.
+With your order taken, you resume your slow trek through the drive-thru line. After another moderate wait, you arrive at the pay window.
 
-				"That will be seven dollars and fifty cents." The lady at the window relays to you.
+	"That will be seven dollars and fifty cents." The lady at the window relays to you.
 
-				"Alright," you respond as you reach for your wallet. You find it rather quickly in the place you remember putting it. Luckily, you remembered to grab it before leaving the house.
+	"Alright," you respond as you reach for your wallet. You find it rather quickly in the place you remember putting it. Luckily, you remembered to grab it before leaving the house.
 
-			You pull out the required amount and hand it to the woman.
+You pull out the required amount and hand it to the woman.
 
-				"Thank you! Next window please," she says with a smile.
+	"Thank you! Next window please," she says with a smile.
 
-			You follow your instruction and continue your journey through the line.
+You follow your instruction and continue your journey through the line.
 		</dialog>
 		<options> Continue. [19] </options>
 	</scene>
 	<scene> <!-- 19 -->
 		<dialog>
-			Finally arriving at the pick-up window. The employee there is waiting happily with a smile on his face to hand you your food.
+Finally arriving at the pick-up window. The employee there is waiting happily with a smile on his face to hand you your food.
 
-				"Need anything else?" he asks cheerfully.
+	"Need anything else?" he asks cheerfully.
 
-				"No thank you, I'm fine," you respond.
+	"No thank you, I'm fine," you respond.
 
-				"Alrighty then, hope you have great rest of your morning!" he exclaims while giving you your food.
+	"Alrighty then, hope you have great rest of your morning!" he exclaims while giving you your food.
 
-			What a pleasant drive-thru experience. You pull out of the line and head back towards to your house. When you arrive, you take your food and eagerly head inside to find somewhere to eat.
+What a pleasant drive-thru experience. You pull out of the line and head back towards to your house. When you arrive, you take your food and eagerly head inside to find somewhere to eat.
 
-			Sitting down, you open up the bag and look in. A bright glowing light permeates from within. You reach into the glorious container and withdraw a delicious looking biscuit from its depths. The biscuit is magnificent, holding all of the wonderfull biscuity qualities you would associate with a magnificent biscuit.
+Sitting down, you open up the bag and look in. A bright glowing light permeates from within. You reach into the glorious container and withdraw a delicious looking biscuit from its depths. The biscuit is magnificent, holding all of the wonderfull biscuity qualities you would associate with a magnificent biscuit.
 
-			You did not only come this far to admire this creation though, raising the biscuit to your mouth, you take a bite...
+You did not only come this far to admire this creation though, raising the biscuit to your mouth, you take a bite...
 		</dialog>
 		<options> The end. [49] </options>
 	</scene>
 	<scene> <!-- 20 -->
 		<dialog>
-			With your order taken, you resume your slow trek through the drive-thru line. After another moderate wait, you arrive at the pay window.
+With your order taken, you resume your slow trek through the drive-thru line. After another moderate wait, you arrive at the pay window.
 
-				"That will be seven dollars and fifty cents." The lady at the window relays to you.
+	"That will be seven dollars and fifty cents." The lady at the window relays to you.
 
-				"Alright." You respond as you reach for your wallet. "Uh, one moment please," you nervously tell the woman as you continue feeling for your wallet... oh no. You've forgotten it at home.
+	"Alright." You respond as you reach for your wallet. "Uh, one moment please," you nervously tell the woman as you continue feeling for your wallet... oh no. You've forgotten it at home.
 
-				"If you don't mind the line needs to get moving along," she says slightly annoyed.
+	"If you don't mind the line needs to get moving along," she says slightly annoyed.
 
-			You frantically begin scouring your vehicle for any loose money. You look behind the seats, under the seats, you check in the console, you scavenge the glovebox, you even crawl around in your floorboard for a few minutes until finally feeling as if you have exhausted all possible locations any money have been misplaced.
+You frantically begin scouring your vehicle for any loose money. You look behind the seats, under the seats, you check in the console, you scavenge the glovebox, you even crawl around in your floorboard for a few minutes until finally feeling as if you have exhausted all possible locations any money have been misplaced.
 
-			You get yourself situated in your chair and realize you've accumulated... 3 dollars.
+You get yourself situated in your chair and realize you've accumulated... 3 dollars.
 
-				You clear your throat, "Uhh... how about you just drop the sides and the drink and I'll just take the biscuit," you propose.
+	You clear your throat, "Uhh... how about you just drop the sides and the drink and I'll just take the biscuit," you propose.
 
-			The woman silently glares at you for a solid 15 seconds before slowly extending her arm. Feeling a little unnerved by the woman's piercing gaze, you cautiously place your money into her hand.
+The woman silently glares at you for a solid 15 seconds before slowly extending her arm. Feeling a little unnerved by the woman's piercing gaze, you cautiously place your money into her hand.
 
-				"Next window please." She states flatly before closing the window.
+	"Next window please." She states flatly before closing the window.
 
-			Not wanting to risk her possibly returning to find you continuing to clog up the line, you decide to accept her advice and move forward in the line.
+Not wanting to risk her possibly returning to find you continuing to clog up the line, you decide to accept her advice and move forward in the line.
 		</dialog>
-		<optons> Continue. [21] </optons>
+		<options> Continue. [21] </options>
 	</scene>
 	<scene> <!-- 21 -->
 		<dialog>
-			Finally arriving at the pick-up window, the employee is already waiting there with your biscuit as a result of how long the line was waiting for you to get here. They hand you the biscuit in an irritated manner without saying a word. You grab the biscuit and they immediately let it go and close their window back, all without ever saying a word.
+Finally arriving at the pick-up window, the employee is already waiting there with your biscuit as a result of how long the line was waiting for you to get here. They hand you the biscuit in an irritated manner without saying a word. You grab the biscuit and they immediately let it go and close their window back, all without ever saying a word.
 
-			You'd think you just accidentally murdered the franchise mascot or something with how they're acting. I mean, they didn't even give you a bag. Just handed you a solitary wrapped breakfast biscuit.
+You'd think you just accidentally murdered the franchise mascot or something with how they're acting. I mean, they didn't even give you a bag. Just handed you a solitary wrapped breakfast biscuit.
 
-			You pull out of the line and drive back home. You exit your vehicle and enter your house where you go find a place to sit and eat. You unwrap your cold, slightly smushed (wonder who did that...) biscuit. It is in a sad state of affair. You didn't come this far to not eat it though. You raise the sad biscuit to your mouth and take a bite.
+You pull out of the line and drive back home. You exit your vehicle and enter your house where you go find a place to sit and eat. You unwrap your cold, slightly smushed (wonder who did that...) biscuit. It is in a sad state of affair. You didn't come this far to not eat it though. You raise the sad biscuit to your mouth and take a bite.
 		</dialog>
 		<options> The end. [50] </options>
 	</scene>
 	<scene> <!-- 22 -->
 		<dialog>
-			You feel in the mood to go and sit down at a nice cafe and have a calm relaxing morning. You navigate your way through the early morning traffic until eventually arriving at your destination. Exiting your vehicle, you make your way inside of the cafe.
+You feel in the mood to go and sit down at a nice cafe and have a calm relaxing morning. You navigate your way through the early morning traffic until eventually arriving at your destination. Exiting your vehicle, you make your way inside of the cafe.
 
-			"Hi, how may I serve you this morning?" a friendly employee asks with a smile.
+	"Hi, how may I serve you this morning?" a friendly employee asks with a smile.
 		</dialog>
 		<options> Order something. [23] </options>
 	</scene>
 	<scene> <!-- 23 -->
 		<dialog>
-			You rattle off your favorite order to the cheerful employee. You pay for the food before they hand you a ticket and you go find a nice place to sit to wait for your food. After a short wait, you see one of the waiters bringing your order to the table. Sweet breakfast is on the way at last... but wait.
+You rattle off your favorite order to the cheerful employee. You pay for the food before they hand you a ticket and you go find a nice place to sit to wait for your food. After a short wait, you see one of the waiters bringing your order to the table. Sweet breakfast is on the way at last... but wait.
 
-			Suddenly, a bat-masked man with a cape dressed in all black sprints across the room and snatches your order right out of their hands! He continues straight out of the establishment and takes off down the street.
+Suddenly, a bat-masked man with a cape dressed in all black sprints across the room and snatches your order right out of their hands! He continues straight out of the establishment and takes off down the street.
 
-			What do you do?
+What do you do?
 		</dialog>
 		<options> Chase after him! [24] </options>
 		<options> Call the police! [36] </options>
@@ -281,15 +292,15 @@
 	</scene>
 	<scene> <!-- 24 -->
 		<dialog>
-			You spring from your seat and begin your pursuit! You quickly make it out of the establishment and begin looking for which way the perpetrator went.
+You spring from your seat and begin your pursuit! You quickly make it out of the establishment and begin looking for which way the perpetrator went.
 		</dialog>
 		<options> Follow after him! {D 3 25} [26] </options>
 	</scene>
 	<scene> <!-- 25 -->
 		<dialog>
-			Using your pristine detection skills, you catch a glimpse of the man's cape at it disappears down an alley way. You immediately adjust your path and head directly for his last seen location. Reaching the entrance of the alley you see the man standing at the end of it. He has nowhere to go.
+Using your pristine detection skills, you catch a glimpse of the man's cape at it disappears down an alley way. You immediately adjust your path and head directly for his last seen location. Reaching the entrance of the alley you see the man standing at the end of it. He has nowhere to go.
 
-			How will you attempt to retrieve your food?
+How will you attempt to retrieve your food?
 		</dialog>
 		<options> Try to convince him. {C 3 29} [30] </options>
 		<options> Take it by force. {E 3 31} [32] </options>
@@ -297,137 +308,147 @@
 	</scene>
 	<scene> <!-- 26 -->
 		<dialog>
-			Due your not so pristine detection skills, you follow what you believed to be a glimpse of the man's cape down an alleyway. Once you arrive however, you sadly realize that you just chased a black trash bag down an alleyway...
+Due your not so pristine detection skills, you follow what you believed to be a glimpse of the man's cape down an alleyway. Once you arrive however, you sadly realize that you just chased a black trash bag down an alleyway...
 
-			The suspect is long gone by now, and you are left in this alley alone. What will you do now?
+The suspect is long gone by now, and you are left in this alley alone. What will you do now?
 		</dialog>
 		<options> Give up. [27] </options>
 		<options> Get breakfast at all costs. [28] </options>
 	</scene>
 	<scene> <!-- 27 -->
 		<dialog>
-			You decide you cannot be bothered by this fruitless pursuit any longer. You simply fall to your kness, stare up into the cold blue sky. And allow a single tear to flow down your cheek.
+You decide you cannot be bothered by this fruitless pursuit any longer. You simply fall to your kness, stare up into the cold blue sky. And allow a single tear to flow down your cheek.
 
-			THE END
+THE END
 		</dialog>
+		<options></options>
 	</scene>
 	<scene> <!-- 28 -->
 		<dialog>
-			You did not come this far to go away with nothing. Looking around, you try to find anything you can to fulfill your desire for breakfast. You scour every nook and cranny of this dark decrepid alley until you finally see it. At long last, you peer into a slightly ajar trash can. Jackpot! You've found a... half-eaten... bagel... oh no.
+You did not come this far to go away with nothing. Looking around, you try to find anything you can to fulfill your desire for breakfast. You scour every nook and cranny of this dark decrepid alley until you finally see it. At long last, you peer into a slightly ajar trash can. Jackpot! You've found a... half-eaten... bagel... oh no.
 
-			Swallawing your pride, and any chances of not coming down with some type of serious illness, you grasp the bagel from the depths of its tin prison. Slowly bringing the piece of food towards you lips, you find a surface with relatively few insects or other visibly disgusting attributes. You take a bite.
+Swallawing your pride, and any chances of not coming down with some type of serious illness, you grasp the bagel from the depths of its tin prison. Slowly bringing the piece of food towards you lips, you find a surface with relatively few insects or other visibly disgusting attributes. You take a bite.
 		</dialog>
 		<options> The end. [50] </options>
 	</scene>
 	<scene> <!-- 29 -->
 		<dialog>
-			You choose to try and convince this Rather Dim Knight to return your food to you peacefully.
+You choose to try and convince this Rather Dim Knight to return your food to you peacefully.
 
-				"Hey, man. I don't want any trouble. Just give me back my food and we can go our separate ways." you say.
+	"Hey, man. I don't want any trouble. Just give me back my food and we can go our separate ways." you say.
 
-				"No, I am hungry. I've spent all night fighting the injustices of this city. I deserve some food." He responds in a deep raspy voice.
+	"No, I am hungry. I've spent all night fighting the injustices of this city. I deserve some food." He responds in a deep raspy voice.
 
-				"Okay, sure. But I already paid for that food... so wouldn't you be doing an injustice by stealing it from me?" you ask slightly confused.
+	"Okay, sure. But I already paid for that food... so wouldn't you be doing an injustice by stealing it from me?" you ask slightly confused.
 
-				His face suddenly drops. A sudden downpour begins as the sky turns gray. Dramatic music begins playing from some unknown origin. He stares at the ground in disbelief. "How... how could I have done this?" He slowly walks towards you, his head in a hanging position the entire time. "Here. I- I'm sorry." He hands you the bag of your food as he passes by.
+	His face suddenly drops. A sudden downpour begins as the sky turns gray. Dramatic music begins playing from some unknown origin. He stares at the ground in disbelief. "How... how could I have done this?" He slowly walks towards you, his head in a hanging position the entire time. "Here. I- I'm sorry." He hands you the bag of your food as he passes by.
 
-			You watch as the defeated man sadly walks by you. The cold hard rain dripping off of his Chiropteran-themed armor. You look into your bag for a brief moment to check if all of the food is still there, it is. When you look back up, the masked vigilante has vanished seemingly into thin air. No trace of him in sight...
+You watch as the defeated man sadly walks by you. The cold hard rain dripping off of his Chiropteran-themed armor. You look into your bag for a brief moment to check if all of the food is still there, it is. When you look back up, the masked vigilante has vanished seemingly into thin air. No trace of him in sight...
 
-			Anyway, the rain and music stop as suddenly as they began and the sun returns from behind the clouds to bring the joyous mood back to this fine morning. You go find a nice bench and sit down ready to eat your breakfast. Taking out the first item, you take a satisfying bite.
+Anyway, the rain and music stop as suddenly as they began and the sun returns from behind the clouds to bring the joyous mood back to this fine morning. You go find a nice bench and sit down ready to eat your breakfast. Taking out the first item, you take a satisfying bite.
 		</dialog>
 		<options> The end. [49] </options>
 	</scene>
 	<scene> <!-- 30 -->
 		<dialog>
-			You choose to try and convince this Rather Dim Knight to return your food to you peacefully.
+You choose to try and convince this Rather Dim Knight to return your food to you peacefully.
 
-				"Hey, man. I- uh don't want trouble. Just give me the food and we can go our separate ways." you say.
+	"Hey, man. I- uh don't want trouble. Just give me the food and we can go our separate ways." you say.
 
-				"No, I am hungry. I've spent all night fighting the injustices of this city. I deserve some food." He responds in a deep raspy voice.
+	"No, I am hungry. I've spent all night fighting the injustices of this city. I deserve some food." He responds in a deep raspy voice.
 
-				"Okay, sure. But I, you know, already paid and stuff... so would you doing that not be bad justice too?" you ask slightly confused. Not giving a very clear or concise argument with your rather poor charming ability.
+	"Okay, sure. But I, you know, already paid and stuff... so would you doing that not be bad justice too?" you ask slightly confused. Not giving a very clear or concise argument with your rather poor charming ability.
 
-				He looks troubled for a brief moment before his steely gaze returns to him. "No! You're no better than the criminal scum I've dealt with all night by trying to deprive me of the nutrients I need to keep up my strength. You will dealt with in the same manner..." He sets the bag on the ground and begins moving towards you... uh oh.
+	He looks troubled for a brief moment before his steely gaze returns to him. "No! You're no better than the criminal scum I've dealt with all night by trying to deprive me of the nutrients I need to keep up my strength. You will dealt with in the same manner..." He sets the bag on the ground and begins moving towards you... uh oh.
 
-			He moves with lightning fast efficiency and speed. Before you even have time to react, everything goes black.
-			You awaken face first on the cold pavement with pain all over your body. The food and the masked vigilante who had taken it are nowhere in sight. You slowly sit up, defeated. Contemplating how you ended up in this tragic scenario as your stomach rumbles one more time...
+He moves with lightning fast efficiency and speed. Before you even have time to react, everything goes black.
+You awaken face first on the cold pavement with pain all over your body. The food and the masked vigilante who had taken it are nowhere in sight. You slowly sit up, defeated. Contemplating how you ended up in this tragic scenario as your stomach rumbles one more time...
 
-			THE END
+THE END
+			</dialog>
+			<options></options>
+	</scene>
 	<scene> <!-- 31 -->
 		<dialog>
-			You put up your fist and prepare for a fight. The food theif does the same. You slowly approach one another, analyzing every movement. The two of you stop getting closer and begin a slow circling movement as you study each other's intentions. It feels like ages, but in the matter of seconds, the fight commences with just one step towards your foe.
+You put up your fist and prepare for a fight. The food theif does the same. You slowly approach one another, analyzing every movement. The two of you stop getting closer and begin a slow circling movement as you study each other's intentions. It feels like ages, but in the matter of seconds, the fight commences with just one step towards your foe.
 
-			The two of you clash in an epic battle of intense martial arts prowess. Trading blows move-for-move as you both try to break the others defense. The fight is long and fierce, neither of you making any ground on the other... that is, until you spot your advantage. Glancing down at the peculiarly dressed man's cape, an idea sparks in your mind to take the upper hand. You let your guard down for just a moment, allowing him to land a few hits, but use this seemingly momentary pause in your combat to throw a powerful lunge of your shoulder into him. He keeps his balance rather easily, until his cape ends up under his foot. As he steps back to maintain his balance, you watch as he pulls himself to the ground due to his rather poor combat attire decisions. He lands flat on his back, hitting his head on the pavement as he falls. You waste no time in pouncing on top the stunned foe and begin wailing on him. Before long, the fight is over. The breakfast thief lay unconcious on the ground, and you move off of him to go collect your order.
+The two of you clash in an epic battle of intense martial arts prowess. Trading blows move-for-move as you both try to break the others defense. The fight is long and fierce, neither of you making any ground on the other... that is, until you spot your advantage. Glancing down at the peculiarly dressed man's cape, an idea sparks in your mind to take the upper hand. You let your guard down for just a moment, allowing him to land a few hits, but use this seemingly momentary pause in your combat to throw a powerful lunge of your shoulder into him. He keeps his balance rather easily, until his cape ends up under his foot. As he steps back to maintain his balance, you watch as he pulls himself to the ground due to his rather poor combat attire decisions. He lands flat on his back, hitting his head on the pavement as he falls. You waste no time in pouncing on top the stunned foe and begin wailing on him. Before long, the fight is over. The breakfast thief lay unconcious on the ground, and you move off of him to go collect your order.
 
-			After such a hard fought victory, you take your food and head to the nearest bench available. You sit down, remove the first item of your breakfast, and take a delicious bite.
+After such a hard fought victory, you take your food and head to the nearest bench available. You sit down, remove the first item of your breakfast, and take a delicious bite.
 		</dialog>
 		<options> The end. [49] </options>
 	</scene>
 	<scene> <!-- 32 -->
-		You put up your fist and prepare for a fight. The food theif does the same. You slowly approach one another, analyzing every movement. The two of you stop getting closer and begin a slow circling movement as you study each other's intentions. It feels like ages, but in the matter of seconds, the fight commences with just one step towards your foe.
+		<dialog>
+You put up your fist and prepare for a fight. The food theif does the same. You slowly approach one another, analyzing every movement. The two of you stop getting closer and begin a slow circling movement as you study each other's intentions. It feels like ages, but in the matter of seconds, the fight commences with just one step towards your foe.
 
-		You are quite clearly outmatched. As soon as the fight begins, your opponent out maneuvers any attempted offensive strikes you attempt while expertly navigating around your feebile defensive attempts to land blow after blow. This rather embarrasing beatdown of epic magnitude does not last long however, as he grows tired of using your squishy body as a pinata. He draws back his hand as far as needed, and comes forth with a devestating blast directly to your chin. You are knocked out on impact.
+You are quite clearly outmatched. As soon as the fight begins, your opponent out maneuvers any attempted offensive strikes you attempt while expertly navigating around your feebile defensive attempts to land blow after blow. This rather embarrasing beatdown of epic magnitude does not last long however, as he grows tired of using your squishy body as a pinata. He draws back his hand as far as needed, and comes forth with a devestating blast directly to your chin. You are knocked out on impact.
 
-		There you lay, unconscious in an alley way, but even more tragically, breakfastless in an alley way. The cloaked man reclaims the bag of food, and continues on his way. Leaving your motionless tattered and bruised body to miss its morning nutrients for the day...
+There you lay, unconscious in an alley way, but even more tragically, breakfastless in an alley way. The cloaked man reclaims the bag of food, and continues on his way. Leaving your motionless tattered and bruised body to miss its morning nutrients for the day...
 
-		THE END
+THE END
+		</dialog>
+		<options></options>
 	</scene>
 	<scene> <!-- 33 -->
 		<dialog>
-			Without taking even a moment to allow either of you to think, you take off in full speed towards the man.
+Without taking even a moment to allow either of you to think, you take off in full speed towards the man.
 
-			Time slows down, you move like lightning, the masked man does not even have time to raise a hand before you are upon him. You close line the man as you pass by at superhuman speed, knocking him unconscious immediately... well that was easy.
+Time slows down, you move like lightning, the masked man does not even have time to raise a hand before you are upon him. You close line the man as you pass by at superhuman speed, knocking him unconscious immediately... well that was easy.
 
-			You retrieve your food and make your way to the nearest bench available. Sitting down, you remove your first item for breakfast and dig in...
+You retrieve your food and make your way to the nearest bench available. Sitting down, you remove your first item for breakfast and dig in...
 		</dialog>
 		<options> The end. [49] </options>
 	</scene>
 	<scene> <!-- 34 -->
 		<dialog>
-			Without taking even a moment to allow either of you to think, you take off in full speed towards the man.
+Without taking even a moment to allow either of you to think, you take off in full speed towards the man.
 
-			Looking at your approach with a face of utter confusion and a little bit of what you can only percieve as uncertain fear, the man puts up his guard and waits... and waits... and waits... eventually you do manage to arrive. Once you do however, the man places one well-placed high kick directly into your jaw and sends you flying backwards to the ground unconcious... ouch.
+Looking at your approach with a face of utter confusion and a little bit of what you can only percieve as uncertain fear, the man puts up his guard and waits... and waits... and waits... eventually you do manage to arrive. Once you do however, the man places one well-placed high kick directly into your jaw and sends you flying backwards to the ground unconcious... ouch.
 
-			The man, still seemingly a little confused by your tactics, simply walks away with your food and leaves you lying there motionless... that could have definitely gone better.
+The man, still seemingly a little confused by your tactics, simply walks away with your food and leaves you lying there motionless... that could have definitely gone better.
 
-			THE END
+THE END
 		</dialog>
+		<options></options>
 	</scene>
 	<scene> <!-- 35 -->
 		<dialog>
-			You immediately give up on any chances of retrieving your delicous meal. It just isn't worth putting in even the slightest amount of effort to reclaim the stolen food. You don't even stand up from your seated position as you lay your head in your hand and look out of the window next to you.
+You immediately give up on any chances of retrieving your delicous meal. It just isn't worth putting in even the slightest amount of effort to reclaim the stolen food. You don't even stand up from your seated position as you lay your head in your hand and look out of the window next to you.
 
-			There he is. The thief is sitting on the other side of the street at a picnic table in your local park. You could go confront him, but what's the point? You just sit there. Staring at him expressionless as he enjoys the meal that was intended for you. He finishes eating the food and casually strolls away into the distance.
+There he is. The thief is sitting on the other side of the street at a picnic table in your local park. You could go confront him, but what's the point? You just sit there. Staring at him expressionless as he enjoys the meal that was intended for you. He finishes eating the food and casually strolls away into the distance.
 
-			Now there you are. Sitting in a cafe booth all by yourself contempletating the meaning of your existence. All you wanted was to enjoy some tasty breakfast, but you were only rewarded with existential dread.
+Now there you are. Sitting in a cafe booth all by yourself contempletating the meaning of your existence. All you wanted was to enjoy some tasty breakfast, but you were only rewarded with existential dread.
 
-			THE END
+THE END
 		</dialog>
+		<options></options>
 	</scene>
 	<scene> <!-- 36 -->
 		<dialog>
-			You hastily pull out your phone and dial the authorities with lightning speed.
+You hastily pull out your phone and dial the authorities with lightning speed.
 
-				"911, what is your emergency?" the voice on the other end answers.
+	"911, what is your emergency?" the voice on the other end answers.
 
-				"Someone has stolen my food!" you proclaim.
+	"Someone has stolen my food!" you proclaim.
 
-				"Has the food been missing for over 24 hours?" they ask.
+	"Has the food been missing for over 24 hours?" they ask.
 
-				"What? No. What does that matter?" you ask in return.
+	"What? No. What does that matter?" you ask in return.
 
-				"Apologies, but we can not respond to incidents of this nature until the missing food has been unaccounted for for at least 24 hours. Have a nice day." they state plainly before the call abruptly ends.
+	"Apologies, but we can not respond to incidents of this nature until the missing food has been unaccounted for for at least 24 hours. Have a nice day." they state plainly before the call abruptly ends.
 
-			How could this be? Left all alone in your time of greatest need. The criminal is long by now, probably enjoying your delectable treats at his own felonous leisure... you drop your head onto the table in disbelief. A single tear streaming down your face...
+How could this be? Left all alone in your time of greatest need. The criminal is long by now, probably enjoying your delectable treats at his own felonous leisure... you drop your head onto the table in disbelief. A single tear streaming down your face...
 
-			THE END
+THE END
 		</dialog>
+		<options></options>
 	</scene>
 	<scene> <!-- 37 -->
 		<dialog>
-			Making your way into the kitchen, you look around in the fridge and cabinets looking for what you have lying around that you could make. In the fridge and freezer you find: some milk and bacon. In the cabinets you find: some pancake mix, toaster pastries, bread, and cereal.
+Making your way into the kitchen, you look around in the fridge and cabinets looking for what you have lying around that you could make. In the fridge and freezer you find: some milk and bacon. In the cabinets you find: some pancake mix, toaster pastries, bread, and cereal.
 
-			What will you make?
+What will you make?
 		</dialog>
 		<options> Cereal {B 2 45} [46] </options>
 		<options> Toast and bacon {D 3 43} [44] </options>
@@ -436,94 +457,101 @@
 	</scene>
 	<scene> <!-- 38 -->
 		<dialog>
-			You grab the pasties out of the cabinet and plop them into the toaster. 0ing the toaster, you wait a couple minutes before they eventually pop out, slightly 0ling you, ready to be enjoyed. You take a bite and they taste exactly how you'd expect a corporate chemical creation to taste... nothing else of note really happens. That was quite boring, but then again, should it not have been? It was a pre-packaged item designed for a quick, albeit usually unsatisfying morning treat. Maybe you could try something else next time, or maybe you really enjoyed this easy meal. Regardless, your job is done.
+You grab the pasties out of the cabinet and plop them into the toaster. 0ing the toaster, you wait a couple minutes before they eventually pop out, slightly 0ling you, ready to be enjoyed. You take a bite and they taste exactly how you'd expect a corporate chemical creation to taste... nothing else of note really happens. That was quite boring, but then again, should it not have been? It was a pre-packaged item designed for a quick, albeit usually unsatisfying morning treat. Maybe you could try something else next time, or maybe you really enjoyed this easy meal. Regardless, your job is done.
 
-			Congragulations! You had breakfast. It may have been unceremonius and frankly pretty bland, but hey, good job.
+Congragulations! You had breakfast. It may have been unceremonius and frankly pretty bland, but hey, good job.
 
-			THE END
+THE END
 		</dialog>
+		<options></options>
 	</scene>
 	<scene> <!-- 39 -->
 		<dialog>
-			You grab the pancake mix out of the cabinet and get it ready to pour. Carefully making three separate pancake blobs in your pan, you continue to carefully follow the directions that came with the box until they are finished. You remove the crispy golden delights and place them on a plate before adding any extra toppings and sweetness that you desire. Cutting into the tasty treat, you take a satisfying bite of your masterpiece before resolving to savour every bite afterwards as you enjoy your creation.
+You grab the pancake mix out of the cabinet and get it ready to pour. Carefully making three separate pancake blobs in your pan, you continue to carefully follow the directions that came with the box until they are finished. You remove the crispy golden delights and place them on a plate before adding any extra toppings and sweetness that you desire. Cutting into the tasty treat, you take a satisfying bite of your masterpiece before resolving to savour every bite afterwards as you enjoy your creation.
 		</dialog>
 		<options> The end. [49] </options>
 	</scene>
 	<scene> <!-- 40 -->
 		<dialog>
-			You failed a Brain check.
+You failed a Brain check.
 		</dialog>
 		<options> Continue... {E 3 41} [42] </options>
 	</scene>
 	<scene> <!-- 41 -->
 		<dialog>
-			You grab the pancake mix out of the cabinet and get it ready to pour. Unfortunately, you have completely misread the instructions that came with the box. Your rather... uninspiring intelligence has doomed your endeavor to end poorly right from the 0. You do your best to follow what you believed the directions to say before eventually finishing your "pancakes." You are left with 3 extremely dry, pretty burnt, and all-around displeasing to witness masses of what was meant to be pancakes. You poke one with a fork and take a bite...
+You grab the pancake mix out of the cabinet and get it ready to pour. Unfortunately, you have completely misread the instructions that came with the box. Your rather... uninspiring intelligence has doomed your endeavor to end poorly right from the start. You do your best to follow what you believed the directions to say before eventually finishing your "pancakes." You are left with 3 extremely dry, pretty burnt, and all-around displeasing to witness masses of what was meant to be pancakes. You poke one with a fork and take a bite...
 		</dialog>
+		<options> The end. [50] </options>
 	</scene>
 	<scene> <!-- 42 -->
 		<dialog>
-			You grab the pancake mix out of the cabinet and get it ready to pour. Unfortunately, you have completely misread the instructions that came with the box. Your rather... uninspiring intelligence has doomed your endeavor to end poorly right from the 0. You do your best to follow what you believed the directions to say before eventually finishing your "pancakes." You are left with 3 extremely dry, pretty burnt, and all-around displeasing to witness masses of what was meant to be pancakes. You poke one with a fork and take a bite... 
+You grab the pancake mix out of the cabinet and get it ready to pour. Unfortunately, you have completely misread the instructions that came with the box. Your rather... uninspiring intelligence has doomed your endeavor to end poorly right from the start. You do your best to follow what you believed the directions to say before eventually finishing your "pancakes." You are left with 3 extremely dry, pretty burnt, and all-around displeasing to witness masses of what was meant to be pancakes. You poke one with a fork and take a bite... 
 
-			Oh no, that is absolutely atrocious! You feel your mouth immediately dry out from the abomination you recklessly entered into it. As a matter of fact, the pancake is SO dry that its absorptive capabilties do not stop. It sticks to the inside of your mouth and refuses to leave as it siphons all hydration from your body. What did you do to create this pancake of mass destruction? Will it be satiated with only your liquid provision, or will this vile creation move on to take over part of if not the entire world? Well, that is for others to find out, as your evil pancake invention has taken too much of your body's water supply to properly function. You collapse to the floor, lifeless, with a still dry and sticky pancake stuck to the inside of your mouth.
+Oh no, that is absolutely atrocious! You feel your mouth immediately dry out from the abomination you recklessly entered into it. As a matter of fact, the pancake is SO dry that its absorptive capabilties do not stop. It sticks to the inside of your mouth and refuses to leave as it siphons all hydration from your body. What did you do to create this pancake of mass destruction? Will it be satiated with only your liquid provision, or will this vile creation move on to take over part of if not the entire world? Well, that is for others to find out, as your evil pancake invention has taken too much of your body's water supply to properly function. You collapse to the floor, lifeless, with a still dry and sticky pancake stuck to the inside of your mouth.
 
-			THE END.
+THE END.
 		</dialog>
+		<options></options>
 	</scene>
 	<scene> <!-- 43 -->
 		<dialog>
-			You make your way around the kitchen collecting the items you'll need to prepare your food. You grab a skillet for cooking your food as well. You place your skillet on the stove top and turn it on. You carefully cook your bacon while keeping a close eye to make sure you don't burn it. You butter up your toast and do the same for it. Before long you have a delicious looking meal that would make just about anyone that enjoys well-made food's mouth water with anticipation. You slowly raise a piece of food to your lips before taking your first satisfingly crunchy bite.
+You make your way around the kitchen collecting the items you'll need to prepare your food. You grab a skillet for cooking your food as well. You place your skillet on the stove top and turn it on. You carefully cook your bacon while keeping a close eye to make sure you don't burn it. You butter up your toast and do the same for it. Before long you have a delicious looking meal that would make just about anyone that enjoys well-made food's mouth water with anticipation. You slowly raise a piece of food to your lips before taking your first satisfingly crunchy bite.
 		</dialog>
 		<options> The end. [49] </options>
 	</scene>
 	<scene> <!-- 44 -->
 		<dialog>
-			You make your way around the kitchen collecting the items you'll need to prepare your food. You grab a skillet for cooking your food as well. You place your skillet on the stove top and turn it on. You begin to cook the food without taking much time to look at how long you've cooked it and regularly failing to check how cooked your food actually is. By the time you've finished preparing the food, you are left with a plate of black charred items that seem to have the vague shape of what used to be bacon and toast. You raise one of these charcoal wonders of human creation (and not in a good way) and take a bite. Mmmm. Tastes like sadness.
+You make your way around the kitchen collecting the items you'll need to prepare your food. You grab a skillet for cooking your food as well. You place your skillet on the stove top and turn it on. You begin to cook the food without taking much time to look at how long you've cooked it and regularly failing to check how cooked your food actually is. By the time you've finished preparing the food, you are left with a plate of black charred items that seem to have the vague shape of what used to be bacon and toast. You raise one of these charcoal wonders of human creation (and not in a good way) and take a bite. Mmmm. Tastes like sadness.
 		</dialog>
 		<options> The end. [50] </options>
 	</scene>
 	<scene> <!-- 45 -->
 		<dialog>
-			You take the milk and cereal out of the fridge and cabinet respectively. You go and grab a bowl, but before you get too far, you realize that this milk is actually out of date. That was close! Throwing that milk out, you open the fridge back up and take out the one you recently purchased. You pour the cereal in the bowl first (like a normal person...) and then fill it with some milk. You grab a spoon and dig in!
+You take the milk and cereal out of the fridge and cabinet respectively. You go and grab a bowl, but before you get too far, you realize that this milk is actually out of date. That was close! Throwing that milk out, you open the fridge back up and take out the one you recently purchased. You pour the cereal in the bowl first (like a normal person...) and then fill it with some milk. You grab a spoon and dig in!
 		</dialog>
 		<options> The end. [49] </options>
 	</scene>
 	<scene> <!-- 46 -->
 		<dialog>
-			You have failed a Brain check.
+You have failed a Brain check.
 		</dialog>
 		<options> Continue... {E 2 47} [48] </options>
 	</scene>
 	<scene> <!-- 47 -->
 		<dialog>
-			You take the milk and cereal out of the fridge and cabinet respectively. You go and grab a bowl and pour some cereal into it. You then grab the milk and 0 to pour it in as well. Due to your, uh, lackluster deductional skills, you don't even mind the chunks pouring out of the container along with the rest of the "milk". Once you are satisfied with your cereal to milk ratio, you grab a spoon and dig in! ...but then you realize something is terribly wrong.
+You take the milk and cereal out of the fridge and cabinet respectively. You go and grab a bowl and pour some cereal into it. You then grab the milk and 0 to pour it in as well. Due to your, uh, lackluster deductional skills, you don't even mind the chunks pouring out of the container along with the rest of the "milk". Once you are satisfied with your cereal to milk ratio, you grab a spoon and dig in! ...but then you realize something is terribly wrong.
 		</dialog>
 		<options> The end. [50] </options>
 	</scene>
 	<scene> <!-- 48 -->
 		<dialog>
-			You take the milk and cereal out of the fridge and cabinet respectively. You go and grab a bowl and pour some cereal into it. You then grab the milk and 0 to pour it in as well. Due to your, uh, lackluster deductional skills, you don't even mind the chunks pouring out of the container along with the rest of the "milk". Once you are satisfied with your cereal to milk ratio, you grab a spoon and dig in! ...but then you realize something is terribly wrong. 
+You take the milk and cereal out of the fridge and cabinet respectively. You go and grab a bowl and pour some cereal into it. You then grab the milk and 0 to pour it in as well. Due to your, uh, lackluster deductional skills, you don't even mind the chunks pouring out of the container along with the rest of the "milk". Once you are satisfied with your cereal to milk ratio, you grab a spoon and dig in! ...but then you realize something is terribly wrong. 
 
-			The milk was so horribly out of date that your incredibly weak constitution just could not handle it. You can feel your body begin to shut down. The life slowly fades from your body as you glance towards the container that held your demise. The final thing your mortal body witnesses is the expiration date that lists several months prior. As you fade away, you can't help but think, "Why was that still even in my fridge?"...
+The milk was so horribly out of date that your incredibly weak constitution just could not handle it. You can feel your body begin to shut down. The life slowly fades from your body as you glance towards the container that held your demise. The final thing your mortal body witnesses is the expiration date that lists several months prior. As you fade away, you can't help but think, "Why was that still even in my fridge?"...
 
-			You are dead. Perhaps you should have gotten breakfast in a different way... or at least maybe you should work on that endurance. Yikes.
+You are dead. Perhaps you should have gotten breakfast in a different way... or at least maybe you should work on that endurance. Yikes.
 
-			THE END
+THE END
 		</dialog>
+		<options></options>
 	</scene>
 	<scene> <!-- 49 -->
 		<dialog>
-			Congragulations! You successfully took on the world and achieved your admirable goal of devouring a delicious breakfast. There are many other ways for you to aquire a different breakfast too though. Another time, perhaps. Another time.
+Congragulations! You successfully took on the world and achieved your admirable goal of devouring a delicious breakfast. There are many other ways for you to aquire a different breakfast too though. Another time, perhaps. Another time.
 
-			THE END
+THE END
 		</dialog>
+		<options></options>
 		<color_dialog> 35 </color_dialog>
 	</scene>
 	<scene> <!-- 50 -->
 		<dialog>
-			Well, that wasn't very good. Sure, you did eat breakfast... but at what cost? How much of your humanity did you have to sacrifice to achieve this goal? There are so many other ways you could have gotten a different breakfast, but here we are. Maybe you can do better another time.
+Well, that wasn't very good. Sure, you did eat breakfast... but at what cost? How much of your humanity did you have to sacrifice to achieve this goal? There are so many other ways you could have gotten a different breakfast, but here we are. Maybe you can do better another time.
 
-			THE END
+THE END
 		</dialog>
 		<color_dialog> 161 </color_dialog>
+		<options></options>
 	</scene>
+
 </adventure>
