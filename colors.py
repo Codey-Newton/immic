@@ -34,7 +34,7 @@ def scene_colors(story: dict, curr_scene: int):
     picColor = 0
     color_list = [ ]
     if 'color_dialog' in story['adventure']['scene'][curr_scene]:
-        print("you have dialog color: ", int(story['adventure']['scene'][curr_scene]['color_dialog']))
+        #print("you have dialog color: ", int(story['adventure']['scene'][curr_scene]['color_dialog']))
         dialog = int(story['adventure']['scene'][curr_scene]['color_dialog'])
     if 'color_options' in story['adventure']['scene'][curr_scene]:
         options = int(story['adventure']['scene'][curr_scene]['color_options'])
@@ -44,12 +44,11 @@ def scene_colors(story: dict, curr_scene: int):
         picColor = int(story['adventure']['scene'][curr_scene]['picColor'])    
     
     color_list = [dialog, options, boarder, picColor]
-    print(color_list[0])
+   
     return color_list
 
  # takes a image and converts it to ascii art 80 characters wide       
-def a_picture(picture: str):
-    ascii_magic.Modes.ASCII
+def a_picture(picture: str, col=55):
     tmp_pic = ascii_magic.from_image_file(
-        picture, mode = ascii_magic.Modes.ASCII , columns=80)
+        picture, mode = ascii_magic.Modes.ASCII, columns=col)
     return tmp_pic

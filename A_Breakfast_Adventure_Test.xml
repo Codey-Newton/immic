@@ -8,10 +8,10 @@
 
 	<scene> <!-- 0 -->
 		<title>
-		<title_pic_dir>./images/toastPng1.png</title_pic_dir>
-		<save_name>A_Breakfest_adventure</save_name>
-		<title_pic_color>215</title_pic_color>
-		<menu_color>10</menu_color>
+			<title_pic_dir>./images/toastPng1.png</title_pic_dir>
+			<save_name>A_Breakfest_adventure</save_name>
+			<title_pic_color>215</title_pic_color>
+			<menu_color>10</menu_color>
 		</title>
 		<dialog>
 You awaken with a grumble of your stomach. You realize that you are quite hungry and decide that you want to get some breakfast this morning. But wait.
@@ -20,6 +20,11 @@ Where have you actually woken up at.
 		</dialog>
 		<options> In your bed [11] </options>
 		<options> In a tree {A 2 1} [2] </options>
+		<color_dialog>173</color_dialog>
+		<color_options>173</color_options>
+		<color_boarder>184</color_boarder>
+		<picture>./images/sun.png</picture>
+		<picColor>227</picColor>
 	</scene>
 	<scene> <!-- 1 -->
 		<dialog>
@@ -32,6 +37,11 @@ Well that was rather easy. Now, where to next?
 		<options> Head inside to the kitchen. [37] </options>
 		<options> Go inside to get your keys. [16] </options>
 		<options> Walk down the street. [5] </options>
+		<color_dialog>173</color_dialog>
+		<color_options>173</color_options>
+		<picture>./images/tree.png</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>83</picColor>
 	</scene>
 	<scene> <!-- 2 -->
 		<dialog>
@@ -40,6 +50,11 @@ You are... in a tree? You do your best to remember what happened last night, but
 Unfortunately, your less than superb agility capabilities fail you drastically. As you are looking around, you lose your balance and unceremoniously fall out of the tree like a bag of bricks.
 		</dialog>
 		<options> Are you okay? {E 3 4} [3] </options>
+		<color_dialog>173</color_dialog>
+		<color_options>173</color_options>
+		<picture>./images/tree.png</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>83</picColor>
 	</scene>
 	<scene> <!-- 3 -->
 		<dialog>
@@ -50,6 +65,11 @@ Your body now resembles that of... what do they say, oh yes. A pretzel. You are 
 Well that was rather quick and embarrassing. Let's just pretend this didn't happen, yeah? Yeah.
 		</dialog>
 		<options> Retry [0] </options>
+		<color_dialog>125</color_dialog>
+		<color_options>173</color_options>
+		<picture>./images/cskull1.jpeg</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>125</picColor>
 	</scene>
 	<scene> <!-- 4 -->
 		<dialog>
@@ -58,15 +78,25 @@ Yes, actually. Your strong endurance has protected you through this possibly cat
 		<options> Head inside to the kitchen. [37] </options>
 		<options> Go inside to get your keys. [16] </options>
 		<options> Walk down the street. [5] </options>
+		<color_dialog>173</color_dialog>
+		<color_options>173</color_options>
+		<picture>./images/tree.png</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>83</picColor>
 	</scene>
 	<scene> <!-- 5 -->
 		<dialog>
-Feeling a little spontaneous, you choose to 0 walking down the street of your neighborhood. You continue down the sidewalk for quite some time. You're taking in the scenery of this beautiful morning when you do notice some strange movement in the clouds... oh well, what's the worst it could be.
+Feeling a little spontaneous, you choose to go walking down the street of your neighborhood. You continue down the sidewalk for quite some time. You're taking in the scenery of this beautiful morning when you do notice some strange movement in the clouds... oh well, what's the worst it could be.
 
 Where are you walking to?
 		</dialog>
 		<options> To your favorite cafe. [10] </options>
 		<options> Just keep walking. [6] </options>
+		<color_dialog>173</color_dialog>
+		<color_options>173</color_options>
+		<picture>./images/walking.png</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>173</picColor>
 	</scene>
 	<scene> <!-- 6 -->
 		<dialog>
@@ -87,6 +117,11 @@ Just a few minutes later, you spot a food truck in the distance! You are still h
 Suddenly, those strange moving clouds seem to stop moving so randomly. One of them shoots across the sky directly above you and stops. You look back into the food truck and the owner is nowhere to be seen. Before you have time to react a beam of light envelopes your body and you feel like you begin to float, then everything goes black.
 		</dialog>
 		<options> Continue. [7] </options>
+		<color_dialog>173</color_dialog>
+		<color_options>173</color_options>
+		<picture>./images/walking.png</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>173</picColor>
 	</scene>
 	<scene> <!-- 7 -->
 		<dialog>
@@ -105,6 +140,11 @@ You slowly open your eyes to a bright light and a white room. You are strapped t
 	"Well," the woman speaks up again. "We may have recently performed this maneuver on you before. As in last night. Uh... sorry about the tree. Our systems targeting system was slightly off," she says with a laugh... Well that makes a lot more sense now. "Anyway," she continues, "We feel bad about this whole ordeal, so we would like to offer you something as compensation before returning you to your home, and hopefully actually inside of it this time," she remarks.
 		</dialog>
 		<options> Continue. [8] </options>
+		<color_dialog>84</color_dialog>
+		<color_options>173</color_options>
+		<picture>./images/alien.png</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>84</picColor>
 	</scene>
 	<scene> <!-- 8 -->
 		<dialog>
@@ -118,6 +158,11 @@ Opening it up, you view some strange looking items with a note attached. Withdra
 Well that's neat. You withdraw one of the pieces of food. You observe it carefully and give it a good sniff. It smells wonderful. Not wanting to waste their gift, you decide to take a bite and wait no longer...
 		</dialog>
 		<options> The end. [9] </options>
+		<color_dialog>84</color_dialog>
+		<color_options>173</color_options>
+		<picture>./images/alien.png</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>84</picColor>
 	</scene>
 	<scene> <!-- 9 -->
 		<dialog>
@@ -126,6 +171,10 @@ Congragulations! You successfully took on the world, or in the case, the "otherw
 THE END
 		</dialog>
 		<options></options>
+		<color_dialog>84</color_dialog>
+		<picture>./images/alien.png</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>84</picColor>
 	</scene>
 	<scene> <!-- 10 -->
 		<dialog>
@@ -134,6 +183,11 @@ You feel in the mood to go and sit down at a nice cafe and have a calm relaxing 
 "Hi, how may I serve you this morning?" the friendly employee asks with a smile.
 		</dialog>
 		<options> Order something. [23] </options>
+		<color_dialog>173</color_dialog>
+		<color_options>173</color_options>
+		<picture>./images/cafe.png</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>173</picColor>
 	</scene>
 	<scene> <!-- 11 -->
 		<dialog>
@@ -143,6 +197,11 @@ How do you choose to go downstairs?
 		</dialog>
 		<options> Use bedroom door {D 1 14} [15] </options>
 		<options> Use bedroom window. {A 4 12} [13] </options>
+		<color_dialog>173</color_dialog>
+		<color_options>173</color_options>
+		<picColor>74</picColor>
+		<picture>./images/bed.jpg</picture>
+		<color_boarder>184</color_boarder>
 	</scene>
 	<scene> <!-- 12 -->
 		<dialog>
@@ -152,6 +211,11 @@ Surprisingly, you manage to navigate your jump rather well. You land harmlessly 
 		</dialog>
 		<options> Go to kitchen. [37] </options>
 		<options> Get your keys. [16] </options>
+		<color_dialog>173</color_dialog>
+		<color_options>173</color_options>
+		<picture>./images/window.jpg</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>173</picColor>
 	</scene>
 	<scene> <!-- 13 -->
 		<dialog>
@@ -162,6 +226,10 @@ Unsurprisingly, you did not navigate your jump very well. You smack into a tree 
 THE END
 		</dialog>
 		<options></options>
+		<color_dialog>125</color_dialog>
+		<picture>./images/cskull1.jpeg</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>125</picColor>
 	</scene>
 	<scene> <!-- 14 -->
 		<dialog>
@@ -169,15 +237,25 @@ You notice that the staircase has been recently polished and waxed. "Who would p
 		</dialog>
 		<options> Go to kitchen. [37] </options>
 		<options> Get your keys. [16] </options>
+		<color_dialog>173</color_dialog>
+		<color_options>173</color_options>
+		<picture>./images/stairs.png</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>173</picColor>
 	</scene>
 	<scene> <!-- 15 -->
 		<dialog>
-Without even taking a mere second to even look at your surroundings, you decide to 0 your jog down the stairs. Unfortunately, you've failed to notice that someone had recently polished and waxed the stairs outside of your bedroom...
+Without even taking a mere second to even look at your surroundings, you decide to do your jog down the stairs. Unfortunately, you've failed to notice that someone had recently polished and waxed the stairs outside of your bedroom...
 
 After making it successfully onto the first step, your foot slides rather quickly out from under your body and you begin your unceremonious tumble down the staircase. Your world becomes a blur of rotation household furniture as you approach your destination of the living room floor. Ouch.
 		</dialog>
 		<options> Go to kitchen. [37] </options>
 		<options> Get your keys. [16] </options>
+		<color_dialog>173</color_dialog>
+		<color_options>173</color_options>
+		<picture>./images/walking.png</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>173</picColor>
 	</scene>
 	<scene> <!-- 16 -->
 		<dialog>
@@ -189,6 +267,11 @@ Now that you're on the road, what are you in the mood for?
 		</dialog>
 		<options> Dine-in cafe. [22] </options>
 		<options> Fast food drive-thru. [17] </options>
+		<color_dialog>173</color_dialog>
+		<color_options>173</color_options>
+		<color_boarder>184</color_boarder>
+		<picture>./images/question.png</picture>
+		<picColor>203</picColor>
 	</scene>
 	<scene> <!-- 17 -->
 		<dialog>
@@ -201,6 +284,11 @@ You feel like heading for a good 'ole fashioned drive-thru. You make your way to
 After giving your order some thought, you tell the person on the other end of the speaker what you'd like.
 		</dialog>
 		<options> Continue. {B 2 18} [20] </options>
+		<color_dialog>173</color_dialog>
+		<color_options>173</color_options>
+		<picColor>173</picColor>
+		<picture>./images/fast_food.png</picture>
+		<color_boarder>184</color_boarder>
 	</scene>
 	<scene> <!-- 18 -->
 		<dialog>
@@ -217,6 +305,11 @@ You pull out the required amount and hand it to the woman.
 You follow your instruction and continue your journey through the line.
 		</dialog>
 		<options> Continue. [19] </options>
+		<color_dialog>173</color_dialog>
+		<color_options>173</color_options>
+		<picColor>173</picColor>
+		<picture>./images/drive_window1.png</picture>
+		<color_boarder>184</color_boarder>
 	</scene>
 	<scene> <!-- 19 -->
 		<dialog>
@@ -235,9 +328,14 @@ Sitting down, you open up the bag and look in. A bright glowing light permeates 
 You did not only come this far to admire this creation though, raising the biscuit to your mouth, you take a bite...
 		</dialog>
 		<options> The end. [49] </options>
+		<color_dialog>173</color_dialog>
+		<color_options>173</color_options>
+		<picColor>173</picColor>
+		<picture>./images/biscuit.jpg</picture>
+		<color_boarder>184</color_boarder>
 	</scene>
 	<scene> <!-- 20 -->
-		<dialog>
+<dialog>
 With your order taken, you resume your slow trek through the drive-thru line. After another moderate wait, you arrive at the pay window.
 
 	"That will be seven dollars and fifty cents." The lady at the window relays to you.
@@ -257,8 +355,13 @@ The woman silently glares at you for a solid 15 seconds before slowly extending 
 	"Next window please." She states flatly before closing the window.
 
 Not wanting to risk her possibly returning to find you continuing to clog up the line, you decide to accept her advice and move forward in the line.
-		</dialog>
+</dialog>
 		<options> Continue. [21] </options>
+		<color_dialog>173</color_dialog>
+		<color_options>173</color_options>
+		<picColor>173</picColor>
+		<picture>./images/drive_window1.png</picture>
+		<color_boarder>184</color_boarder>
 	</scene>
 	<scene> <!-- 21 -->
 		<dialog>
@@ -269,6 +372,8 @@ You'd think you just accidentally murdered the franchise mascot or something wit
 You pull out of the line and drive back home. You exit your vehicle and enter your house where you go find a place to sit and eat. You unwrap your cold, slightly smushed (wonder who did that...) biscuit. It is in a sad state of affair. You didn't come this far to not eat it though. You raise the sad biscuit to your mouth and take a bite.
 		</dialog>
 		<options> The end. [50] </options>
+		<picture>./images/biscuit.jpg</picture>
+		<picColor>83</picColor>
 	</scene>
 	<scene> <!-- 22 -->
 		<dialog>
@@ -277,6 +382,11 @@ You feel in the mood to go and sit down at a nice cafe and have a calm relaxing 
 	"Hi, how may I serve you this morning?" a friendly employee asks with a smile.
 		</dialog>
 		<options> Order something. [23] </options>
+		<color_dialog>173</color_dialog>
+		<color_options>173</color_options>
+		<picColor>173</picColor>
+		<picture>./images/cafe.png</picture>
+		<color_boarder>184</color_boarder>
 	</scene>
 	<scene> <!-- 23 -->
 		<dialog>
@@ -289,12 +399,23 @@ What do you do?
 		<options> Chase after him! [24] </options>
 		<options> Call the police! [36] </options>
 		<options> Give up. It's not worth it... [35] </options>
+		<color_dialog>185</color_dialog>
+		<color_options>173</color_options>
+		<picture>./images/crime.png</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>240</picColor>
 	</scene>
 	<scene> <!-- 24 -->
 		<dialog>
 You spring from your seat and begin your pursuit! You quickly make it out of the establishment and begin looking for which way the perpetrator went.
 		</dialog>
-		<options> Follow after him! {D 3 25} [26] </options>
+		<options> Follow after him {A 3 25} [26] </options>
+		<color_dialog>185</color_dialog>
+		<color_options>173</color_options>
+		<picture>./images/walking.png</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>173</picColor>
+		
 	</scene>
 	<scene> <!-- 25 -->
 		<dialog>
@@ -305,6 +426,11 @@ How will you attempt to retrieve your food?
 		<options> Try to convince him. {C 3 29} [30] </options>
 		<options> Take it by force. {E 3 31} [32] </options>
 		<options> CHARGE!!! {A 4 33} [34] </options>
+		<color_dialog>185</color_dialog>
+		<color_options>173</color_options>
+		<picture>./images/crime.png</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>240</picColor>
 	</scene>
 	<scene> <!-- 26 -->
 		<dialog>
@@ -314,6 +440,11 @@ The suspect is long gone by now, and you are left in this alley alone. What will
 		</dialog>
 		<options> Give up. [27] </options>
 		<options> Get breakfast at all costs. [28] </options>
+		<color_dialog>185</color_dialog>
+		<color_options>173</color_options>
+		<picture>./images/crime.png</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>240</picColor>
 	</scene>
 	<scene> <!-- 27 -->
 		<dialog>
@@ -322,6 +453,10 @@ You decide you cannot be bothered by this fruitless pursuit any longer. You simp
 THE END
 		</dialog>
 		<options></options>
+		<color_dialog>40</color_dialog>
+		<picture>./images/tear.png</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>40</picColor>
 	</scene>
 	<scene> <!-- 28 -->
 		<dialog>
@@ -330,6 +465,11 @@ You did not come this far to go away with nothing. Looking around, you try to fi
 Swallawing your pride, and any chances of not coming down with some type of serious illness, you grasp the bagel from the depths of its tin prison. Slowly bringing the piece of food towards you lips, you find a surface with relatively few insects or other visibly disgusting attributes. You take a bite.
 		</dialog>
 		<options> The end. [50] </options>
+		<color_dialog>185</color_dialog>
+		<color_options>173</color_options>
+		<picture>./images/crime.png</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>240</picColor>
 	</scene>
 	<scene> <!-- 29 -->
 		<dialog>
@@ -348,6 +488,11 @@ You watch as the defeated man sadly walks by you. The cold hard rain dripping of
 Anyway, the rain and music stop as suddenly as they began and the sun returns from behind the clouds to bring the joyous mood back to this fine morning. You go find a nice bench and sit down ready to eat your breakfast. Taking out the first item, you take a satisfying bite.
 		</dialog>
 		<options> The end. [49] </options>
+		<color_dialog>185</color_dialog>
+		<color_options>173</color_options>
+		<picture>./images/crime.png</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>240</picColor>
 	</scene>
 	<scene> <!-- 30 -->
 		<dialog>
@@ -367,6 +512,11 @@ You awaken face first on the cold pavement with pain all over your body. The foo
 THE END
 			</dialog>
 			<options></options>
+			<color_dialog>40</color_dialog>
+			<color_options>173</color_options>
+			<picture>./images/tear.png</picture>
+			<color_boarder>184</color_boarder>
+			<picColor>40</picColor>
 	</scene>
 	<scene> <!-- 31 -->
 		<dialog>
@@ -377,6 +527,11 @@ The two of you clash in an epic battle of intense martial arts prowess. Trading 
 After such a hard fought victory, you take your food and head to the nearest bench available. You sit down, remove the first item of your breakfast, and take a delicious bite.
 		</dialog>
 		<options> The end. [49] </options>
+		<color_dialog>185</color_dialog>
+		<color_options>173</color_options>
+		<picture>./images/crime.png</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>240</picColor>
 	</scene>
 	<scene> <!-- 32 -->
 		<dialog>
@@ -389,6 +544,11 @@ There you lay, unconscious in an alley way, but even more tragically, breakfastl
 THE END
 		</dialog>
 		<options></options>
+		<color_dialog>185</color_dialog>
+		<color_options>173</color_options>
+		<picture>./images/crime.png</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>240</picColor>
 	</scene>
 	<scene> <!-- 33 -->
 		<dialog>
@@ -399,6 +559,11 @@ Time slows down, you move like lightning, the masked man does not even have time
 You retrieve your food and make your way to the nearest bench available. Sitting down, you remove your first item for breakfast and dig in...
 		</dialog>
 		<options> The end. [49] </options>
+		<color_dialog>185</color_dialog>
+		<color_options>173</color_options>
+		<picture>./images/crime.png</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>240</picColor>
 	</scene>
 	<scene> <!-- 34 -->
 		<dialog>
@@ -411,6 +576,7 @@ The man, still seemingly a little confused by your tactics, simply walks away wi
 THE END
 		</dialog>
 		<options></options>
+		<color_boarder>184</color_boarder>
 	</scene>
 	<scene> <!-- 35 -->
 		<dialog>
@@ -423,6 +589,10 @@ Now there you are. Sitting in a cafe booth all by yourself contempletating the m
 THE END
 		</dialog>
 		<options></options>
+		<color_dialog>40</color_dialog>
+		<picture>./images/tear.png</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>40</picColor>
 	</scene>
 	<scene> <!-- 36 -->
 		<dialog>
@@ -443,6 +613,10 @@ How could this be? Left all alone in your time of greatest need. The criminal is
 THE END
 		</dialog>
 		<options></options>
+		<color_boarder>184</color_boarder>
+		<color_dialog>125</color_dialog>
+		<picture>./images/alarm.png</picture>
+		<picColor>40</picColor>
 	</scene>
 	<scene> <!-- 37 -->
 		<dialog>
@@ -454,34 +628,59 @@ What will you make?
 		<options> Toast and bacon {D 3 43} [44] </options>
 		<options> Pancakes {B 2 39} [40] </options>
 		<options> The toaster pastries [38] </options>
+		<color_dialog>173</color_dialog>
+		<color_options>173</color_options>
+		<color_boarder>184</color_boarder>
+		<picture>./images/question.png</picture>
+		<picColor>203</picColor>
 	</scene>
 	<scene> <!-- 38 -->
 		<dialog>
-You grab the pasties out of the cabinet and plop them into the toaster. 0ing the toaster, you wait a couple minutes before they eventually pop out, slightly 0ling you, ready to be enjoyed. You take a bite and they taste exactly how you'd expect a corporate chemical creation to taste... nothing else of note really happens. That was quite boring, but then again, should it not have been? It was a pre-packaged item designed for a quick, albeit usually unsatisfying morning treat. Maybe you could try something else next time, or maybe you really enjoyed this easy meal. Regardless, your job is done.
+You grab the pasties out of the cabinet and plop them into the toaster. Watching the toaster, you wait a couple minutes before they eventually pop out, slightly startling you, ready to be enjoyed. You take a bite and they taste exactly how you'd expect a corporate chemical creation to taste... nothing else of note really happens. That was quite boring, but then again, should it not have been? It was a pre-packaged item designed for a quick, albeit usually unsatisfying morning treat. Maybe you could try something else next time, or maybe you really enjoyed this easy meal. Regardless, your job is done.
 
 Congragulations! You had breakfast. It may have been unceremonius and frankly pretty bland, but hey, good job.
 
 THE END
 		</dialog>
 		<options></options>
+		<color_dialog>178</color_dialog>
+		<color_options>173</color_options>
+		<color_boarder>184</color_boarder>
+		<picture>./images/toaster.jpg</picture>
+		<picColor>178</picColor>
 	</scene>
 	<scene> <!-- 39 -->
 		<dialog>
 You grab the pancake mix out of the cabinet and get it ready to pour. Carefully making three separate pancake blobs in your pan, you continue to carefully follow the directions that came with the box until they are finished. You remove the crispy golden delights and place them on a plate before adding any extra toppings and sweetness that you desire. Cutting into the tasty treat, you take a satisfying bite of your masterpiece before resolving to savour every bite afterwards as you enjoy your creation.
 		</dialog>
 		<options> The end. [49] </options>
+		<color_dialog>173</color_dialog>
+		<color_options>173</color_options>
+		<picture>./images/pancakes.jpg</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>173</picColor>
 	</scene>
 	<scene> <!-- 40 -->
 		<dialog>
 You failed a Brain check.
 		</dialog>
 		<options> Continue... {E 3 41} [42] </options>
+		<color_dialog>173</color_dialog>
+		<color_options>173</color_options>
+		<picture>./images/pancakes.jpg</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>173</picColor>
 	</scene>
 	<scene> <!-- 41 -->
 		<dialog>
 You grab the pancake mix out of the cabinet and get it ready to pour. Unfortunately, you have completely misread the instructions that came with the box. Your rather... uninspiring intelligence has doomed your endeavor to end poorly right from the start. You do your best to follow what you believed the directions to say before eventually finishing your "pancakes." You are left with 3 extremely dry, pretty burnt, and all-around displeasing to witness masses of what was meant to be pancakes. You poke one with a fork and take a bite...
 		</dialog>
 		<options> The end. [50] </options>
+		<color_dialog>173</color_dialog>
+		<color_options>173</color_options>
+		<picture>./images/pancakes.jpg</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>173</picColor>
 	</scene>
 	<scene> <!-- 42 -->
 		<dialog>
@@ -492,36 +691,63 @@ Oh no, that is absolutely atrocious! You feel your mouth immediately dry out fro
 THE END.
 		</dialog>
 		<options></options>
+		<color_dialog>173</color_dialog>
+		<color_options>173</color_options>
+		<picture>./images/pancakes.jpg</picture>
+		<color_boarder>184</color_boarder>
+		<picColor>173</picColor>
 	</scene>
 	<scene> <!-- 43 -->
 		<dialog>
 You make your way around the kitchen collecting the items you'll need to prepare your food. You grab a skillet for cooking your food as well. You place your skillet on the stove top and turn it on. You carefully cook your bacon while keeping a close eye to make sure you don't burn it. You butter up your toast and do the same for it. Before long you have a delicious looking meal that would make just about anyone that enjoys well-made food's mouth water with anticipation. You slowly raise a piece of food to your lips before taking your first satisfingly crunchy bite.
 		</dialog>
 		<options> The end. [49] </options>
+		<color_dialog>173</color_dialog>
+		<color_options>173</color_options>
+		<color_boarder>184</color_boarder>
+		<picture>./images/skillet.jpg</picture>
+		<picColor>245</picColor>
 	</scene>
 	<scene> <!-- 44 -->
 		<dialog>
 You make your way around the kitchen collecting the items you'll need to prepare your food. You grab a skillet for cooking your food as well. You place your skillet on the stove top and turn it on. You begin to cook the food without taking much time to look at how long you've cooked it and regularly failing to check how cooked your food actually is. By the time you've finished preparing the food, you are left with a plate of black charred items that seem to have the vague shape of what used to be bacon and toast. You raise one of these charcoal wonders of human creation (and not in a good way) and take a bite. Mmmm. Tastes like sadness.
 		</dialog>
 		<options> The end. [50] </options>
+		<color_dialog>173</color_dialog>
+		<color_options>173</color_options>
+		<color_boarder>184</color_boarder>
+		<picture>./images/skillet.jpg</picture>
+		<picColor>245</picColor>
 	</scene>
 	<scene> <!-- 45 -->
 		<dialog>
 You take the milk and cereal out of the fridge and cabinet respectively. You go and grab a bowl, but before you get too far, you realize that this milk is actually out of date. That was close! Throwing that milk out, you open the fridge back up and take out the one you recently purchased. You pour the cereal in the bowl first (like a normal person...) and then fill it with some milk. You grab a spoon and dig in!
 		</dialog>
 		<options> The end. [49] </options>
+		<color_boarder>184</color_boarder>
+		<color_dialog>185</color_dialog>
+		<picture>./images/milk.png</picture>
+		<picColor>16</picColor>
 	</scene>
 	<scene> <!-- 46 -->
 		<dialog>
 You have failed a Brain check.
 		</dialog>
 		<options> Continue... {E 2 47} [48] </options>
+		<color_boarder>184</color_boarder>
+		<color_dialog>185</color_dialog>
+		<picture>./images/milk.png</picture>
+		<picColor>16</picColor>
 	</scene>
 	<scene> <!-- 47 -->
 		<dialog>
-You take the milk and cereal out of the fridge and cabinet respectively. You go and grab a bowl and pour some cereal into it. You then grab the milk and 0 to pour it in as well. Due to your, uh, lackluster deductional skills, you don't even mind the chunks pouring out of the container along with the rest of the "milk". Once you are satisfied with your cereal to milk ratio, you grab a spoon and dig in! ...but then you realize something is terribly wrong.
+You take the milk and cereal out of the fridge and cabinet respectively. You go and grab a bowl and pour some cereal into it. You then grab the milk and go to pour it in as well. Due to your, uh, lackluster deductional skills, you don't even mind the chunks pouring out of the container along with the rest of the "milk". Once you are satisfied with your cereal to milk ratio, you grab a spoon and dig in! ...but then you realize something is terribly wrong.
 		</dialog>
 		<options> The end. [50] </options>
+		<color_boarder>184</color_boarder>
+		<color_dialog>185</color_dialog>
+		<picture>./images/milk.png</picture>
+		<picColor>83</picColor>
 	</scene>
 	<scene> <!-- 48 -->
 		<dialog>
@@ -534,6 +760,10 @@ You are dead. Perhaps you should have gotten breakfast in a different way... or 
 THE END
 		</dialog>
 		<options></options>
+		<color_boarder>184</color_boarder>
+		<color_dialog>83</color_dialog>
+		<picture>./images/cskull1.jpeg</picture>
+		<picColor>83</picColor>
 	</scene>
 	<scene> <!-- 49 -->
 		<dialog>
@@ -543,6 +773,9 @@ THE END
 		</dialog>
 		<options></options>
 		<color_dialog> 35 </color_dialog>
+		<color_boarder>184</color_boarder>
+		<picture>./images/thumbs.png</picture>
+		<picColor>35</picColor>
 	</scene>
 	<scene> <!-- 50 -->
 		<dialog>
@@ -550,8 +783,11 @@ Well, that wasn't very good. Sure, you did eat breakfast... but at what cost? Ho
 
 THE END
 		</dialog>
-		<color_dialog> 161 </color_dialog>
 		<options></options>
+		<color_boarder>184</color_boarder>
+		<color_dialog>125</color_dialog>
+		<picture>./images/thumbsdown.png</picture>
+		<picColor>125</picColor>
 	</scene>
 
 </adventure>

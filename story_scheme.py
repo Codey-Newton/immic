@@ -4,7 +4,7 @@ title_pic_color = 0
 menu_color = 0
 list_ps = [ ]
 
-def check(story: dict, Pic_dir: str, save_name: str):
+def check(story: dict):
 
     # check to see if title tag is in scene 0 + initialization
     if 'title' in story['adventure']['scene'][0]:

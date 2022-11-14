@@ -49,10 +49,9 @@ def title_screen(stdscr):
         curses.use_default_colors()
         for i in range(0, curses.COLORS):
             curses.init_pair(i + 1, i, -1)
-        title_win = curses.newwin(20 , 81, h//2 - 21, w//2 - 35)
+        title_win = curses.newwin(100 , 180, h//2 - 21, w//2 - 35)
 
-        title = colors.a_picture(Picture)
-
+        title = colors.a_picture(title_pic, 155)
 
         while 1:
 
@@ -155,28 +154,54 @@ def print_pause_menu(stdscr):
             stdscr.clear()
 
 def divide_screen(stdscr):
-    global Input, color_listG
+    global Input, color_listG, Picture
+    characterpic = """\
+            /////\\
+            |O O ||
+            |/   @|
+             \-_//
+            __| |__
+          .'       `.
+          |         |
+          | |     | |
+          | |     | |
+          | |     | |
+          |_|     |_|
+          \/|_____|\/
+            |  |  |
+            |  |  |
+            |  |  |
+            |  |  |
+            |  |  |
+            |  |  |
+           _|__|__|
+          (__(____] """
     stdscr.clear()
     stdscr.refresh()
     end = 0
     h, w = stdscr.getmaxyx()
 
-    character_win = curses.newwin(h, w//4, 30, 0)
-    story_win = curses.newwin(h//2-1, w//2+55, 0, w//4+3)
-    choices_win = curses.newwin(h//2-1, w//2+27, h//2+1, w//4+3)
+    picture_win = curses.newwin(h//2-3, w//4-4, 2, 4)
+    character_win = curses.newwin(h//2-1, w//4-8, h//2+1, 8)
+    story_win = curses.newwin(h//2-1, w//2+20, 0, w//4+3)
+    choices_win = curses.newwin(h//2-1, w//2+47, h//2+1, w//4+3)
     border_win = curses.newwin(h, 3, 0, w//4)
-    border2_win = curses.newwin(3, w//2+27, h//2-1, w//4+2)
+    border2_win = curses.newwin(1, w, h//2-1, 0)
     while 1:
 
         border_win.clear()
         border2_win.clear()
         character_win.clear()
         story_win.clear()
-        #choices_win.clear()
+        picture_win.clear()
+        picture_win.addstr(Picture, curses.color_pair(color_listG[3])) 
         for i in range(h):
             border_win.addstr(i, 0,"||", curses.color_pair(color_listG[2]))
-        for i in range(w//2+27):
+        for i in range(w-1):
             border2_win.addstr(0, i,"_", curses.color_pair(color_listG[2]))
+        character_win.addstr(characterpic)
+        character_win.addstr("\n")
+        character_win.addstr("\n")
         character_win.addstr("Character Name = ")
         character_win.addstr(Player.name)
         character_win.addstr("\n")
@@ -203,6 +228,7 @@ def divide_screen(stdscr):
             story_win.refresh()
             choices_win.refresh()
             character_win.refresh()
+            picture_win.refresh()
             stdscr.move(26, 40)
             k = stdscr.getch()
 
@@ -217,7 +243,7 @@ def divide_screen(stdscr):
                 break
             else:
                 choices_win.addstr(10, 8, chr(k))
-                choices_win.addstr(10, 12, "Invalid input. Only 0 is valid", curses.color_pair(161))
+                choices_win.addstr(10, 12, "Invalid input. Only 0 is valid")
         if len(Options) == 2:
             choices_win.addstr(2, 8, Options[0], curses.color_pair(color_listG[1]))
             choices_win.addstr("\n")
@@ -227,6 +253,7 @@ def divide_screen(stdscr):
             story_win.refresh()
             choices_win.refresh()
             character_win.refresh()
+            picture_win.refresh()
             stdscr.move(26, 40)
             k = stdscr.getch()
             if k == 27:
@@ -255,6 +282,7 @@ def divide_screen(stdscr):
             story_win.refresh()
             choices_win.refresh()
             character_win.refresh()
+            picture_win.refresh()
             stdscr.move(26, 40)
             k = stdscr.getch()
             if k == 27:
@@ -287,6 +315,7 @@ def divide_screen(stdscr):
             story_win.refresh()
             choices_win.refresh()
             character_win.refresh()
+            picture_win.refresh()
             stdscr.move(26, 40)
             k = stdscr.getch()
 
@@ -308,7 +337,7 @@ def divide_screen(stdscr):
                 break
             else:
                 choices_win.addstr(10, 8, chr(k))
-                choices_win.addstr(10, 12, "Invalid input. Only numbers [0, 1, 2, 3] are valid", curses.color_pair(161))
+                choices_win.addstr(10, 12, "Invalid input. Only numbers [0, 1, 2, 3] are valid")
 
 #######################################################################################
 
@@ -374,8 +403,8 @@ def get_response(story: dict, curr_scene: int):
         string = story['adventure']['scene'][curr_scene]['options'])
 
         parse_check = re.search(pattern = "(?<=\{)[A-E] [0-9] [0-9]+(?=\})", \
-        string = story['adventure']['scene'][curr_scene]['options'][option_index])
-
+        string = story['adventure']['scene'][curr_scene]['options'])
+        
         if parse_check != None:
 
             skill_list = parse_check[0].split()
@@ -399,15 +428,17 @@ def get_response(story: dict, curr_scene: int):
 
         parse_check = re.search(pattern = "(?<=\{)[A-E] [0-9] [0-9]+(?=\})", \
         string = story['adventure']['scene'][curr_scene]['options'][option_index])
-
+        #print(parse_check)
         if parse_check != None:
 
           skill_list = parse_check[0].split()
+          #print(skill_list)
           skill_check = Player.skill_check(skill_list)
 
           if skill_check == 'F':
               return int(scene_jump_match.group())
           else:
+              #print(skill_check)
               return int(skill_check)
 
     return int(scene_jump_match.group())
@@ -416,23 +447,25 @@ def get_response(story: dict, curr_scene: int):
 
 def story_flow(story: dict):
 
-    global color_listG, Line
+    global color_listG, Line, Picture
 
     curr_scene = Player.scene
 
     while curr_scene != None:
-
+      Picture = ""
       Player.scene = curr_scene
 
       color_listG = colors.scene_colors(story, curr_scene)
-      print(color_listG)
+      
+      #print(color_listG)
 
       if story['adventure']['scene'][curr_scene] == None:
         curr_scene = None
         return 1
 
       Line = story['adventure']['scene'][curr_scene]['dialog']
-
+      if 'picture' in story['adventure']['scene'][curr_scene]:
+        Picture = colors.a_picture(story['adventure']['scene'][curr_scene]['picture'])
       # if a option contains nothing, or returns None, break form the loop.
       if story['adventure']['scene'][curr_scene]['options'] == None:
         global Options
@@ -473,8 +506,14 @@ def main(stdscr):
 
 
 if __name__ == "__main__":
-
-    input_arg = sys.argv[1]
+    
+    if len(sys.argv) == 3:
+        input_arg  = sys.argv[1]
+        input_arg2 = sys.argv[2]
+        if input_arg2 == '-cc':
+            Player = ch.createCharacter()
+    else:
+        input_arg = sys.argv[1]
 
     if input_arg == '-c':
         colors.terminal_colors()
@@ -487,12 +526,15 @@ if __name__ == "__main__":
     # Use xmltodict to parse and convert
     # the XML document
     story = xmltodict.parse(my_xml, namespace_separator=True)
-
-    # run story_file checks 
-    list_ps = story_scheme.check(story, Picture, save_name)
-    Picture = list_ps[0]
-    save_name = list_ps[1]
-    title_pic_color = int(list_ps[2])
-    menu_color = int(list_ps[3])
+    
+    # run story_file checks and initalize title variables 
+    list_title = story_scheme.check(story)
+    title_pic = list_title[0]
+    save_name = list_title[1]
+    title_pic_color = int(list_title[2])
+    menu_color = int(list_title[3])
+    path = Path(f"./saves_immic/{save_name}")
+    if path.is_file() != True:
+       Player = ch.createCharacter()
     curses.wrapper(title_screen)
     
