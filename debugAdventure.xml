@@ -1,0 +1,66 @@
+<adventure>
+	<scene> <!-- Opening scene 0 -->
+	<title>
+		<title_pic_dir>./images/toastPng1.png</title_pic_dir>
+		<save_name>another story</save_name>
+		<title_pic_color>215</title_pic_color>
+		<menu_color>10</menu_color>
+	</title>
+		<color_boarder>69</color_boarder>
+		<color_options>133</color_options>
+		<picColor>56</picColor>
+		<dialog>
+			This is the opening scene of the adventure.
+		</dialog>
+		<color_dialog>120</color_dialog>
+		<options> Make 1st choice {A 2 2}[1] </options>
+		<options> Make 2nd choice [2] </options>
+		<options> Make 3rd chocie [3] </options>
+		<options> Make 4th choice [4] </options>
+	</scene>
+	<scene> <!-- Scene 1 -->
+		 <color_options>133</color_options>
+		 <color_boarder>10</color_boarder>
+		 <color_dialog>60</color_dialog>
+		<dialog>
+	You grab the pancake mix out of the cabinet and get it ready to pour. Unfortunately, you have completely misread the instructions that came with the box.
+Your rather... uninspiring intelligence has doomed your endeavor to end poorly right from the start. You do your best to follow what you believed the directions to
+say before eventually finishing your "pancakes." You are left with 3 extremely dry, pretty burnt, and all-around displeasing to witness masses of what was meant
+to be pancakes. You poke one with a fork and take a bite...
+
+Oh no, that is absolutely atrocious! You feel your mouth immediately dry out from the abomination you recklessly entered into it. As a matter of fact, the pancake
+is SO dry that its absorptive capabilties do not stop. It sticks to the inside of your mouth and refuses to leave as it siphons all hydration from your body. What
+did you do to create this pancake of mass destruction? Will it be satiated with only your liquid provision, or will this vile creation move on to take over part of
+if not the entire world? Well, that is for others to find out, as your evil pancake invention has taken too much of your body's water supply to properly function. 
+You collapse to the floor, lifeless, with a still dry and sticky pancake stuck to the inside of your mouth.
+
+		</dialog>
+		<options> End the game? [5] {B 3 0}  </options>
+		<options> jump to scene 1 [0] </options>
+	</scene>
+	<scene> <!-- Scene 2 -->
+		<dialog>
+			You chose the 2nd choice. This is scene 2.
+		</dialog>
+		<options> End the game. [5] </options>
+	</scene>
+	<scene> <!-- Scene 3 -->
+		<dialog>
+			You chose the 3rd chocie. This is scene 3.
+		</dialog>
+		<options> End the game. [5] </options>
+	</scene>
+	<scene> <!-- Scene 4 -->
+		<dialog>
+			You chose the 4th choice. This is scene 4.
+		</dialog>
+		<options> End the game. [5] </options>
+	</scene>
+	<scene> <!-- End Scene 5 -->
+		<dialog>
+			This is the end of the adventure.
+		</dialog>
+		<options></options>
+	</scene>
+	
+</adventure>
