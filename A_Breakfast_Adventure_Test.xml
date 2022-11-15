@@ -16,7 +16,7 @@
 		<dialog>
 You awaken with a grumble of your stomach. You realize that you are quite hungry and decide that you want to get some breakfast this morning. But wait.
 
-Where have you actually woken up at.
+Where have you actually woken up at?
 		</dialog>
 		<options> In your bed [11] </options>
 		<options> In a tree {A 2 1} [2] </options>
@@ -133,7 +133,7 @@ You slowly open your eyes to a bright light and a white room. You are strapped t
 
 	"Well, you are on our ship. We are what you would call an alien species, and we are studying humans. You are here because one of our newer recruits to our expedition team... let's say, completely freaked out and called us to him," she explains.
 
-	"Sorry about that," another says embarrassed. "I was the person in the food truck. You 0ed asking questions and I panicked," he tells you.
+	"Sorry about that," another says embarrassed. "I was the person in the food truck. You started asking questions and I panicked," he tells you.
 
 	"Why?" you ask in response.
 
@@ -751,7 +751,7 @@ You take the milk and cereal out of the fridge and cabinet respectively. You go 
 	</scene>
 	<scene> <!-- 48 -->
 		<dialog>
-You take the milk and cereal out of the fridge and cabinet respectively. You go and grab a bowl and pour some cereal into it. You then grab the milk and 0 to pour it in as well. Due to your, uh, lackluster deductional skills, you don't even mind the chunks pouring out of the container along with the rest of the "milk". Once you are satisfied with your cereal to milk ratio, you grab a spoon and dig in! ...but then you realize something is terribly wrong. 
+You take the milk and cereal out of the fridge and cabinet respectively. You go and grab a bowl and pour some cereal into it. You then grab the milk and start to pour it in as well. Due to your, uh, lackluster deductional skills, you don't even mind the chunks pouring out of the container along with the rest of the "milk". Once you are satisfied with your cereal to milk ratio, you grab a spoon and dig in! ...but then you realize something is terribly wrong. 
 
 The milk was so horribly out of date that your incredibly weak constitution just could not handle it. You can feel your body begin to shut down. The life slowly fades from your body as you glance towards the container that held your demise. The final thing your mortal body witnesses is the expiration date that lists several months prior. As you fade away, you can't help but think, "Why was that still even in my fridge?"...
 
